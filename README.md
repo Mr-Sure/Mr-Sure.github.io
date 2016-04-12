@@ -1,2 +1,2 @@
-# sure.github.com
-test github pages
+# 少年·Sure
+我的第一个github 博客
