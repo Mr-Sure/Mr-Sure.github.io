@@ -1,211 +1,211 @@
--<!DOCTYPE html>
- -<html lang="zh-cmn-Hans">
- - <head> 
- -  <meta charset="utf-8" /> 
- -  <title>心书 - 用心书写,每个人都是作者</title> 
- -  <meta name="description" content="" /> 
- -  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
- -  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" /> 
- -  <meta name="format-detection" content="telephone=no" /> 
- -  <meta name="renderer" content="webkit" /> 
- -  <meta http-equiv="Cache-Control" content="no-transform" /> 
- -  <meta name="apple-mobile-web-app-capable" content="yes" /> 
- -  <meta name="apple-mobile-web-app-status-bar-style" content="default" /> 
- -  <link rel="shortcut icon" type="image/x-icon" href="https://weixinshu.com/favicon.ico" /> 
- -  <link rel="stylesheet" href="https://xinshu.me/styles/home-1d90d706a4.css" /> 
- - </head> 
- - <body> 
- -  <div id="fullpage" click="javascript:event.stopPropagation();
- -	"> 
- -   <div id="topbar"></div> 
- -   <div id="logo"> 
- -    <a class="am-text-ir" href="/">心书网Xinshu.me</a> 
- -   </div> 
- -   <div class="section section-1"> 
- -    <div class="am-g am-g-fixed am-text-center"> 
- -     <div class="am-u-sm-10 am-u-sm-centered"> 
- -      <div class="hgroup"> 
- -       <h1> <img src="https://xinshu.me/assets/images/logo-sunk.png" alt="心书网" /> </h1> 
- -       <p class="am-text-ir am-text-center">用心书写，每个人都是作者</p> 
- -      </div> 
- -      <form class="am-form-inline" role="form"> 
- -       <div class="am-form-group"> 
- -        <input type="email" class="am-form-field" placeholder="电子邮件" maxlength="50" /> 
- -       </div> 
- -       <div class="am-form-group"> 
- -        <input type="password" class="am-form-field" placeholder="密码" minlength="6" maxlength="30" /> 
- -       </div> 
- -       <button type="submit" class="am-btn am-btn-secondary register">注册</button> 
- -       <button type="submit" class="am-btn am-btn-success login">登录</button> 
- -       <p class="register">已有帐号？<a href="#login">登录</a> </p> 
- -       <p class="login">没有帐号？<a href="#register">注册</a> </p> 
- -      </form> 
- -      <div class="am-container"> 
- -       <a href="/login" class="am-btn am-btn-secondary am-round btn-login"><i class="am-icon-book"></i> 登录心书</a> 
- -       <a href="/user" class="am-btn am-btn-secondary am-round btn-user am-hide"><i class="am-icon-home"></i> 进入我的心书</a> 
- -      </div> 
- -      <div class="video-container am-u-md-8 am-u-md-centered am-hide-sm"> 
- -       <video poster="https://xinshu.me/assets/video.jpg"> 
- -       </video> 
- -      </div> 
- -     </div> 
- -     <span class="move-down"></span> 
- -    </div> 
- -   </div> 
- -   <div class="section section-2"> 
- -    <div class="am-g am-g-fixed"> 
- -     <h2 class="am-text-center"> 心书，中国互联网第一自出版 </h2> 
- -     <div class="am-u-sm-10 am-u-sm-centered"> 
- -      <div class="am-container"> 
- -       <ul class="book-shelf" id="bookShelf"> 
- -       </ul> 
- -       <a id="prev" class="am-icon-chevron-left" href="javascript:void(0)"></a> 
- -       <a id="next" class="am-icon-chevron-right" href="javascript:void(0)"></a> 
- -      </div> 
- -      <p class="am-text-center">那些年写过的微博、微信，在今天，都是一本心书</p> 
- -      <div class="am-text-center"> 
- -       <button class="am-btn am-btn-secondary am-round am-icon-pencil start-writing">&nbsp; 开始写书</button> 
- -      </div> 
- -     </div> 
- -    </div> 
- -   </div> 
- -   <div class="section section-3"> 
- -    <div class="am-g am-g-fixed"> 
- -     <div class="am-u-md-5 am-u-sm-10 am-u-sm-centered am-u-md-uncentered am-hide-sm"> 
- -      <h2>导入社交心路，找回完整的自己</h2> 
- -      <p>你可能写博客，你或许用微博，还可能长期潜伏在QQ空间，又抑或文艺的使用豆瓣，或者紧跟潮流用微信</p> 
- -      <p>不过：千千万万个社交网络里，就有千千万万个你，心书，还原一个完整的你！</p> 
- -     </div> 
- -     <div class="am-u-md-5 am-u-sm-10 am-u-sm-centered am-u-md-uncentered am-show-sm"> 
- -      <h2>导入心路，找回自我</h2> 
- -      <p>你或许偏爱博客，或许钟情微博，又抑或泡在微信或豆瓣</p> 
- -      <p>于千千万万的社交网络里，心书还原一个完整的你</p> 
- -     </div> 
- -     <div class="am-u-md-7 am-u-sm-10 am-u-sm-centered am-u-md-uncentered"> 
- -      <img src="https://xinshu.me/assets/images/mockup1.jpg" alt="" /> 
- -     </div> 
- -    </div> 
- -   </div> 
- -   <div class="section section-4"> 
- -    <div class="am-g am-g-fixed"> 
- -     <div class="am-u-md-5 am-u-md-push-7 am-u-sm-10 am-u-sm-centered am-u-md-uncentered am-hide-sm"> 
- -      <h2>给你一个安静的写作空间</h2> 
- -      <ul> 
- -       <li><span>优雅简洁的写作界面，免于干扰，直抒心意</span> </li> 
- -       <li><span>长文、短文、相册，给你所有素材的想象空间</span> </li> 
- -       <li><span>过去的博客、微博、微信，都是一本关于回忆的书稿</span> </li> 
- -      </ul> 
- -      <p>这一切就像小时候的日记本<br />但今天，这是一本捧在手里的书</p> 
- -     </div> 
- -     <div class="am-u-md-5 am-u-md-push-7 am-u-sm-10 am-u-sm-centered am-u-md-uncentered am-show-sm"> 
- -      <h2>给你一个安静的写作空间</h2> 
- -      <ul> 
- -       <li><span>优雅简洁的写作界面，免于干扰，直抒心意</span> </li> 
- -       <li><span>在社交之外，你我定有更多故事</span> </li> 
- -      </ul> 
- -      <p>这一切就像小时候的日记本<br />但今天，这是一本捧在手里的书</p> 
- -     </div> 
- -     <div class="am-u-md-7 am-u-md-pull-5 am-u-sm-10 am-u-sm-centered am-u-md-uncentered"> 
- -      <img src="https://xinshu.me/assets/images/computer.jpg" alt="" /> 
- -      <div class="mockup"> 
- -       <img src="https://xinshu.me/assets/images/mockup2.jpg" alt="给你一个安静的写作空间" /> 
- -      </div> 
- -     </div> 
- -    </div> 
- -   </div> 
- -   <div class="section section-5"> 
- -    <div class="am-container"> 
- -     <div class="am-g am-g-fixed"> 
- -      <div class="am-u-md-6 am-u-sm-10 am-u-sm-centered am-u-md-uncentered intro"> 
- -       <h2>心书，你的第一个私人出版社</h2> 
- -       <ul class="am-hide-sm"> 
- -        <li><span>领先的内容搜集系统，让书稿毫不费力完成</span> </li> 
- -        <li><span>强大的排版引擎，为你提供不同的排版样式</span> </li> 
- -        <li><span>丰富的个性设计，给你一个与众不同的封面</span> </li> 
- -        <li><span>PDF、Kindle、纸质版，一切由你而定</span> </li> 
- -       </ul> 
- -       <ul class="am-show-sm"> 
- -        <li><span>内容搜集助你完成书稿</span> </li> 
- -        <li><span>排版引擎为你提供写作动力</span> </li> 
- -        <li><span>个性设计，和而不同</span> </li> 
- -        <li><span>纸质、PDF、kindle同步发行</span> </li> 
- -       </ul> 
- -       <p>故事的意义在于拥有读者<br />我们相信你的内心一定有一段精彩的故事！</p> 
- -       <button class="am-btn am-btn-secondary am-round am-icon-pencil start-writing">&nbsp; 开始写书</button> 
- -      </div> 
- -      <div class="accordion am-u-md-12 am-hide-sm"> 
- -       <div class="tab"> 
- -        <div class="title"> 
- -         <p>印刷</p> 
- -         <img src="https://xinshu.me/assets/images/notepad.png" alt="" /> 
- -         <span>发布作品</span> 
- -        </div> 
- -        <div class="content"> 
- -         <h4>发布，堪称神圣的环节</h4> 
- -         <ul> 
- -          <li><span>在心书发布，让你的作品开始流传</span></li> 
- -          <li><span>在心书发布，给你想要的版本</span></li> 
- -          <li><span>在心书发布，给你一个心书ISBN</span></li> 
- -         </ul> 
- -        </div> 
- -       </div> 
- -       <div class="tab"> 
- -        <div class="title"> 
- -         <p>设计</p> 
- -         <img src="https://xinshu.me/assets/images/ruler.png" alt="" /> 
- -         <span>选择封面</span> 
- -        </div> 
- -        <div class="content"> 
- -         <h4>封面，即书的外衣</h4> 
- -         <p>心书让每个人成为作者前都成为一个设计师，无论你是专业设计还是业余人员甚至完全不懂设计，个性封面设计都会帮你做到与众不同。</p> 
- -        </div> 
- -       </div> 
- -       <div class="tab"> 
- -        <div class="title"> 
- -         <p>排版</p> 
- -         <img src="https://xinshu.me/assets/images/cog.png" alt="" /> 
- -         <span>选择模版</span> 
- -        </div> 
- -        <div class="content"> 
- -         <h4>心书排版引擎，快速多变</h4> 
- -         <p>目前支持：单栏排版，双栏排版，杂志排版，和时光轴排版</p> 
- -         <p>你的每一个心情记录，都值得有用完美的排版 <br />每一种排版都即刻完成，实时预览</p> 
- -        </div> 
- -       </div> 
- -       <div class="tab"> 
- -        <div class="title"> 
- -         <p>归档</p> 
- -         <img src="https://xinshu.me/assets/images/drawer.png" alt="" /> 
- -         <span>选择内容</span> 
- -        </div> 
- -        <div class="content"> 
- -         <h4>心书，做你社交回忆的盒子 </h4> 
- -         <ol> 
- -          <li>日志类回忆支持：新浪搜狐网易博客，简书，QQ空间日志</li> 
- -          <li>心情类回忆支持：微博、豆瓣说、qq说说，人人状态</li> 
- -          <li>相册类回忆支持：空间相册、人人相册、豆瓣相册</li> 
- -         </ol> 
- -         <p>后续将支持更多社交网络足迹的收纳与归档，而他们都是你心书的原材料。</p> 
- -        </div> 
- -       </div> 
- -      </div> 
- -     </div> 
- -    </div> 
- -    <footer class="am-u-sm-12 am-hide-sm"> 
- -     <div> 
- -      <a href="https://blog.xinshu.me/?page_id=2">关于我们</a> | 
- -      <a href="https://weixinshu.com">微信书</a> | 
- -      <a href="//yin.xinshu.me">心书印象</a> | 
- -      <a href="#gotop">回顶部</a> 
- -     </div> 
- -     <div>
- -      &copy; 2014-2016 
- -      <a href="https://xinshu.me">xinshu.me</a> 版权所有 ICP证：浙ICP备14013629号-1 
- -     </div> 
- -    </footer> 
- -   </div> 
- -  </div> 
- -  <script src="https://xinshu.me/scripts/home-1468d6313a.js"></script> 
- -  <script src="https://s13.cnzz.com/stat.php?id=5775992&amp;web_id=5775992" language="JavaScript"></script>   
- - </body>
- -</html>
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>心书 - 用心书写,每个人都是作者</title> 
+  <meta name="description" content="" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" /> 
+  <meta name="format-detection" content="telephone=no" /> 
+  <meta name="renderer" content="webkit" /> 
+  <meta http-equiv="Cache-Control" content="no-transform" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" /> 
+  <link rel="shortcut icon" type="image/x-icon" href="https://weixinshu.com/favicon.ico" /> 
+  <link rel="stylesheet" href="https://xinshu.me/styles/home-1d90d706a4.css" /> 
+ </head> 
+ <body> 
+  <div id="fullpage" click="javascript:event.stopPropagation();
+	"> 
+   <div id="topbar"></div> 
+   <div id="logo"> 
+    <a class="am-text-ir" href="/">心书网Xinshu.me</a> 
+   </div> 
+   <div class="section section-1"> 
+    <div class="am-g am-g-fixed am-text-center"> 
+     <div class="am-u-sm-10 am-u-sm-centered"> 
+      <div class="hgroup"> 
+       <h1> <img src="https://xinshu.me/assets/images/logo-sunk.png" alt="心书网" /> </h1> 
+       <p class="am-text-ir am-text-center">用心书写，每个人都是作者</p> 
+      </div> 
+      <form class="am-form-inline" role="form"> 
+       <div class="am-form-group"> 
+        <input type="email" class="am-form-field" placeholder="电子邮件" maxlength="50" /> 
+       </div> 
+       <div class="am-form-group"> 
+        <input type="password" class="am-form-field" placeholder="密码" minlength="6" maxlength="30" /> 
+       </div> 
+       <button type="submit" class="am-btn am-btn-secondary register">注册</button> 
+       <button type="submit" class="am-btn am-btn-success login">登录</button> 
+       <p class="register">已有帐号？<a href="#login">登录</a> </p> 
+       <p class="login">没有帐号？<a href="#register">注册</a> </p> 
+      </form> 
+      <div class="am-container"> 
+       <a href="/login" class="am-btn am-btn-secondary am-round btn-login"><i class="am-icon-book"></i> 登录心书</a> 
+       <a href="/user" class="am-btn am-btn-secondary am-round btn-user am-hide"><i class="am-icon-home"></i> 进入我的心书</a> 
+      </div> 
+      <div class="video-container am-u-md-8 am-u-md-centered am-hide-sm"> 
+       <video poster="https://xinshu.me/assets/video.jpg"> 
+       </video> 
+      </div> 
+     </div> 
+     <span class="move-down"></span> 
+    </div> 
+   </div> 
+   <div class="section section-2"> 
+    <div class="am-g am-g-fixed"> 
+     <h2 class="am-text-center"> 心书，中国互联网第一自出版 </h2> 
+     <div class="am-u-sm-10 am-u-sm-centered"> 
+      <div class="am-container"> 
+       <ul class="book-shelf" id="bookShelf"> 
+       </ul> 
+       <a id="prev" class="am-icon-chevron-left" href="javascript:void(0)"></a> 
+       <a id="next" class="am-icon-chevron-right" href="javascript:void(0)"></a> 
+      </div> 
+      <p class="am-text-center">那些年写过的微博、微信，在今天，都是一本心书</p> 
+      <div class="am-text-center"> 
+       <button class="am-btn am-btn-secondary am-round am-icon-pencil start-writing">&nbsp; 开始写书</button> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="section section-3"> 
+    <div class="am-g am-g-fixed"> 
+     <div class="am-u-md-5 am-u-sm-10 am-u-sm-centered am-u-md-uncentered am-hide-sm"> 
+      <h2>导入社交心路，找回完整的自己</h2> 
+      <p>你可能写博客，你或许用微博，还可能长期潜伏在QQ空间，又抑或文艺的使用豆瓣，或者紧跟潮流用微信</p> 
+      <p>不过：千千万万个社交网络里，就有千千万万个你，心书，还原一个完整的你！</p> 
+     </div> 
+     <div class="am-u-md-5 am-u-sm-10 am-u-sm-centered am-u-md-uncentered am-show-sm"> 
+      <h2>导入心路，找回自我</h2> 
+      <p>你或许偏爱博客，或许钟情微博，又抑或泡在微信或豆瓣</p> 
+      <p>于千千万万的社交网络里，心书还原一个完整的你</p> 
+     </div> 
+     <div class="am-u-md-7 am-u-sm-10 am-u-sm-centered am-u-md-uncentered"> 
+      <img src="https://xinshu.me/assets/images/mockup1.jpg" alt="" /> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="section section-4"> 
+    <div class="am-g am-g-fixed"> 
+     <div class="am-u-md-5 am-u-md-push-7 am-u-sm-10 am-u-sm-centered am-u-md-uncentered am-hide-sm"> 
+      <h2>给你一个安静的写作空间</h2> 
+      <ul> 
+       <li><span>优雅简洁的写作界面，免于干扰，直抒心意</span> </li> 
+       <li><span>长文、短文、相册，给你所有素材的想象空间</span> </li> 
+       <li><span>过去的博客、微博、微信，都是一本关于回忆的书稿</span> </li> 
+      </ul> 
+      <p>这一切就像小时候的日记本<br />但今天，这是一本捧在手里的书</p> 
+     </div> 
+     <div class="am-u-md-5 am-u-md-push-7 am-u-sm-10 am-u-sm-centered am-u-md-uncentered am-show-sm"> 
+      <h2>给你一个安静的写作空间</h2> 
+      <ul> 
+       <li><span>优雅简洁的写作界面，免于干扰，直抒心意</span> </li> 
+       <li><span>在社交之外，你我定有更多故事</span> </li> 
+      </ul> 
+      <p>这一切就像小时候的日记本<br />但今天，这是一本捧在手里的书</p> 
+     </div> 
+     <div class="am-u-md-7 am-u-md-pull-5 am-u-sm-10 am-u-sm-centered am-u-md-uncentered"> 
+      <img src="https://xinshu.me/assets/images/computer.jpg" alt="" /> 
+      <div class="mockup"> 
+       <img src="https://xinshu.me/assets/images/mockup2.jpg" alt="给你一个安静的写作空间" /> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="section section-5"> 
+    <div class="am-container"> 
+     <div class="am-g am-g-fixed"> 
+      <div class="am-u-md-6 am-u-sm-10 am-u-sm-centered am-u-md-uncentered intro"> 
+       <h2>心书，你的第一个私人出版社</h2> 
+       <ul class="am-hide-sm"> 
+        <li><span>领先的内容搜集系统，让书稿毫不费力完成</span> </li> 
+        <li><span>强大的排版引擎，为你提供不同的排版样式</span> </li> 
+        <li><span>丰富的个性设计，给你一个与众不同的封面</span> </li> 
+        <li><span>PDF、Kindle、纸质版，一切由你而定</span> </li> 
+       </ul> 
+       <ul class="am-show-sm"> 
+        <li><span>内容搜集助你完成书稿</span> </li> 
+        <li><span>排版引擎为你提供写作动力</span> </li> 
+        <li><span>个性设计，和而不同</span> </li> 
+        <li><span>纸质、PDF、kindle同步发行</span> </li> 
+       </ul> 
+       <p>故事的意义在于拥有读者<br />我们相信你的内心一定有一段精彩的故事！</p> 
+       <button class="am-btn am-btn-secondary am-round am-icon-pencil start-writing">&nbsp; 开始写书</button> 
+      </div> 
+      <div class="accordion am-u-md-12 am-hide-sm"> 
+       <div class="tab"> 
+        <div class="title"> 
+         <p>印刷</p> 
+         <img src="https://xinshu.me/assets/images/notepad.png" alt="" /> 
+         <span>发布作品</span> 
+        </div> 
+        <div class="content"> 
+         <h4>发布，堪称神圣的环节</h4> 
+         <ul> 
+          <li><span>在心书发布，让你的作品开始流传</span></li> 
+          <li><span>在心书发布，给你想要的版本</span></li> 
+          <li><span>在心书发布，给你一个心书ISBN</span></li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="tab"> 
+        <div class="title"> 
+         <p>设计</p> 
+         <img src="https://xinshu.me/assets/images/ruler.png" alt="" /> 
+         <span>选择封面</span> 
+        </div> 
+        <div class="content"> 
+         <h4>封面，即书的外衣</h4> 
+         <p>心书让每个人成为作者前都成为一个设计师，无论你是专业设计还是业余人员甚至完全不懂设计，个性封面设计都会帮你做到与众不同。</p> 
+        </div> 
+       </div> 
+       <div class="tab"> 
+        <div class="title"> 
+         <p>排版</p> 
+         <img src="https://xinshu.me/assets/images/cog.png" alt="" /> 
+         <span>选择模版</span> 
+        </div> 
+        <div class="content"> 
+         <h4>心书排版引擎，快速多变</h4> 
+         <p>目前支持：单栏排版，双栏排版，杂志排版，和时光轴排版</p> 
+         <p>你的每一个心情记录，都值得有用完美的排版 <br />每一种排版都即刻完成，实时预览</p> 
+        </div> 
+       </div> 
+       <div class="tab"> 
+        <div class="title"> 
+         <p>归档</p> 
+         <img src="https://xinshu.me/assets/images/drawer.png" alt="" /> 
+         <span>选择内容</span> 
+        </div> 
+        <div class="content"> 
+         <h4>心书，做你社交回忆的盒子 </h4> 
+         <ol> 
+          <li>日志类回忆支持：新浪搜狐网易博客，简书，QQ空间日志</li> 
+          <li>心情类回忆支持：微博、豆瓣说、qq说说，人人状态</li> 
+          <li>相册类回忆支持：空间相册、人人相册、豆瓣相册</li> 
+         </ol> 
+         <p>后续将支持更多社交网络足迹的收纳与归档，而他们都是你心书的原材料。</p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <footer class="am-u-sm-12 am-hide-sm"> 
+     <div> 
+      <a href="https://blog.xinshu.me/?page_id=2">关于我们</a> | 
+      <a href="https://weixinshu.com">微信书</a> | 
+      <a href="//yin.xinshu.me">心书印象</a> | 
+      <a href="#gotop">回顶部</a> 
+     </div> 
+     <div>
+      &copy; 2014-2016 
+      <a href="https://xinshu.me">xinshu.me</a> 版权所有 ICP证：浙ICP备14013629号-1 
+     </div> 
+    </footer> 
+   </div> 
+  </div> 
+  <script src="https://xinshu.me/scripts/home-1468d6313a.js"></script> 
+  <script src="https://s13.cnzz.com/stat.php?id=5775992&amp;web_id=5775992" language="JavaScript"></script>   
+ </body>
+</html>
