@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+.main2 {
+	height: 380px;
+	margin:10px 0;
+	width:1000px;
+	background-color: #f2f1ef;
+}
+.news2 {
+	width: 510px;
+	float:left;
+}
+.products2 {
+	width: 480px;
+	float:right;
+	margin-left:6px;
+	height:380px;
+	
+}
+<!--.sidebar {
+	width: 230px;
+	float: left;
+	display: inline;
+	height: 250px;
+}-->
+.news2, .products2 {
+	float: left;
+	display: inline;
+	height: 380px;
+	border: 1px solid #e8e8e8;
+}
+.title2 {
+	height: 35px;
+	border-bottom: 2px solid #E8E8E8;
+	font-family: "微软雅黑";
+	line-height: 35px;
+	font-weight: bold;
+	color:#786F66;
+}
+.titile_left2 {
+	width: 70%;
+	float: left;
+	font-size:20px;
+	padding-left: 20px;
+}
+.title_right2 {
+	width: 20%;
+	float: right;
+	text-align: right;
+}
+.title_right2 a {
+	color: #999;
+	text-decoration: none;
+	font-family: "宋体";
+	font-size: 20px;
+	font-weight: normal;
+	padding-right: 10px;
+}
+.pic_news2 {
+	height: 200px;
+	width:510px;
+	margin-top: 0px;
+	line-height: 22px;
+}
+.pic_list2
+{
+	height:200px;
+	width:480px;
+	margin-top:0;
+	line-height:22px;}
+.pic_news2 img, .product_list2 img {
+	float: left;
+}
+.pic_news2 a, .product_list2 a {
+	color: #C00;
+	text-decoration: none;
+}
+.red2 {
+	color: #8fcf45;
+	font-weight: bold;
+}
+.news_list2 {
+	height:200px;
+	margin-top: 10px;
+}
+.news_list2 li {
+	background: url(../images/list.jpg) no-repeat;
+	list-style-type: none;
+	padding-left: 10px;
+	margin: 10px;
+	border-bottom: 1px dotted #CCC;
+	height: 20px;
+	line-height: 20px;
+}
+.news_list2 span {
+	float: right;
+	color: #999;
+	font-size:16px;
+}
+.news_list2 a:link, .news_list2 a:visited {
+	text-decoration: none;
+	font-size:16px;
+	color: #000;
+}
+.news_list2 a:hover, .news_list2 a:active {
+	color: red;
+	text-decoration: none;
+	font-size:18px;
+}
+.product_list2 {
+	height: 200px;
+	margin-top:0px;
+	line-height: 25px;
+}
+.product_list2 p
+{
+	margin:0px 15px;
+	font-size:14px;
+	color:black;
+	line-height:25px;
+	}
+.product_type2 {
+	width: 372px;
+	height: 37px;
+	background: url(../images/product_type_bg.jpg) no-repeat;
+	margin: 20px auto;
+}
+.product_type2 li {
+	list-style-type: none;
+	float: left;
+	line-height: 37px;
+	/*	width:65px;
+*/	text-align: center;
+	margin: 0 15px;
+}

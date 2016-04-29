@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+.formwrapper{
+	width:240px;
+	height:280px;
+	margin:65px 0 0 2px;
+	float:right;
+	font-family:"微软雅黑"；
+
+	}
+.ab{
+	width:138px;
+	height:36px;
+	margin:10px auto;
+	font-size:16px;
+	color:#8fcf45;
+	text-align:center;
+	border:1px solid #8fcf45;
+	line-height:36px;
+	}
+.bb{
+	width:240px;
+	height:200px;
+	font-size:14px;
+	text-align:center;
+	color:#8fcf45;
+	margin:10 auto;
+
+	}
+fieldset label{
+	font-size:16px;
+	margin:0 5px;}
+
+.buttom{ 
+padding:4px 12px; 
+font-size:12px; 
+border:1px #1E7ACE solid; 
+background:#99F; 
+} 
+
+
