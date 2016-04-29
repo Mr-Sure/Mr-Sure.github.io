@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+	<title>业务介绍</title>
+    <link rel="shortcut icon" type="image/x-icon" href="yanX.ico">
+	<link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".tab li").click(function(){
+                $(".tab li").eq($(this).index()).addClass("cur").siblings().removeClass('cur');
+                $(".tab_con").hide().eq($(this).index()).show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header_left"></div>
+        <div class="header_right">
+        	<div class="header_rup"><img src="images/tel.png" alt="联系方式" width="100%" height="auto"></div>
+        	<div class="header_rdown">
+        	    <form action="#">
+        	    	<input type="text" placeholder="搜索关键字">
+        	    	<input type="submit" value="">
+        	    </form>
+        	</div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav_left">
+	        <img src="images/left.png" alt="" width="75" height="40">
+        </div>
+        <div class="nav_middle">
+        	<ul>
+        		<a href="index.html"><!-- <i id="ihover"></i> --><li>首&nbsp;&nbsp;&nbsp;&nbsp;页</li></a>
+        		<a href="about.html"><li>关于我们</li></a>
+        		<a href="business.html"><li id="hovered">业务介绍</li></a>
+        		<a href="service.html"><li>服务理念</li></a>
+        		<a href="companys.html"><li>旗下公司</li></a>
+        		<a href="lagou.html"><li>诚聘英才</li></a>
+        		<a href="callme.html"><li>联系我们</li></a>
+        	</ul>
+        </div>
+        <div class="nav_right">
+        	<img src="images/right.png" alt="" width="75" height="40">
+        </div>
+    </nav>
+    <div class="line"></div>
+    <div class="business" id="business_block">
+        <div class="at_wrap">
+            <div class="business_left">
+                <div class="com">
+                    <h3>业务介绍</h3>
+                    <h3>BUSINESS INTRODUCTION</h3>
+                    <!-- <img src="images/business.png" alt=""> -->
+                </div>
+                <ul class="tab">
+                       <li class="cur"><i></i>业务范围</li>
+                       <li><i></i>风险管理</li>
+                       <li><i></i>法律法规</li>
+                 </ul>
+            </div>
+            <div class="business_right">
+                <div class="tab_con" id="on">
+                    <div class="con_title">
+                        <h2>业务范围<span>Business scope</span></h2>
+                    </div>
+                    <div class="bus_body">
+                        <p>言信资产通过收购、受托等方式开展不良资产处置业务；为企业提供融资租赁、基金管理、股权投资、并购重组等服务。</p>
+                        <div class="img_list">
+                            <div class="list">
+                                <img src="images/tips1.png" alt="">
+                                <h3>不良资产处置</h3>
+                            </div>
+                            <div class="instruction">
+                                <p>市场化、专业化收购、受托处置不良资产。</p>
+                            </div>
+                        </div>
+                        <div class="img_list">
+                            <div class="list">
+                                <img src="images/tips2.png" alt="">
+                                <h3>并购重组</h3>
+                            </div>
+                            <div class="instruction">
+                                <p>为上市公司出具专业意见等专业服务。</p>
+                            </div>
+                        </div>
+                        <div class="img_list">
+                            <div class="list">
+                                <img src="images/tips3.png" alt="">
+                                <h3>融资租赁</h3>
+                            </div>
+                            <div class="instruction">
+                                <p>通过多种方式为企业提供融资租赁服务。</p>
+                            </div>
+                        </div>
+                        <div class="img_list">
+                            <div class="list">
+                                <img src="images/tips4.png" alt="">
+                                <h3>基金管理</h3>
+                            </div>
+                            <div class="instruction">
+                                <p>通过依法向投资人募集资金成立基金，并按科学的投资组合进行投资决策。</p>
+                            </div>
+                        </div>
+                        <div class="img_list">
+                            <div class="list">
+                                <img src="images/tips5.png" alt="">
+                                <h3>股权投资</h3>
+                            </div>
+                            <div class="instruction">
+                                <p>通过私募基金进行权益性投资。</p>
+                            </div>
+                        </div>
+                        <h3 class="list_title">并购重组</h3>
+                        <p id="list_con">为上市公司的收购、重大资产重组、合并、分立、股份回购等对上市公司股权结构、资产和负债、收入和利润等具有重大影响的并购重组活动提供交易估值、方案设计、出具专业意见等专业服务。</p>
+
+                    </div>
+                </div>
+                <div class="tab_con" id="tab_con22">
+                    <div class="con_title">
+                        <h2>风险管理<span>Risk management</span></h2>
+                    </div>
+                    <div class="bus_body">
+                         <div class="risk_top">
+                             <p>风险管理非权宜之计，是关系企业生死和发展的“命门”。言信资产始终坚持“制度先行、内控先行”理念，以建立全面风险管理体系并使其成为新的优势和核心竞争力为目标，建立了覆盖各业务线和管理部门的风险管理和内部控制体系、有效的风险识别、评估、监测、控制机制，实行业务全流程和全员参与的有效控制，确保经营活动符合法律、监管规定、行业内通用准则和中信集团管理制度要求。</p>
+                             <img src="images/risk_side.png" alt="">
+                         </div>
+                         <div class="risk_list">
+                             <h3>健全的制度体系</h3>
+                             <p>为推进公司规范管理、高效运作，言信资产立足于制度建设的全面性、规范性和实用性，不断细化、完善各项规章制度，着力构建符合法律法规和制度要求、体现公司不同业务性质、易于操作执行的制度体系，为公司稳健、快速和可持续发展提供有力保障。</p>
+                         </div>
+                         <div class="risk_list">
+                             <h3>完善的业务流程</h3>
+                             <p>为满足市场开发和风险管理的需要，言信资产根据公司类金融商业模式定位，建立了严谨、合理、高效的业务流程，既切实防范业务风险，又能满足客户多样化需求，实现公司与客户的双赢。</p>
+                         </div>
+                         <div class="risk_list">
+                             <h3>专业的风险管理团队</h3>
+                             <p>拥有一支具有敬业、专业、市场意识、服务意识强的风险管理团队，具有丰富的风险管理经验，坚持正确处理风险管理与业务发展的关系，制定切实可行的风险应对策略，为业务稳健发展提供专业支持，为公司正确决策提供科学依据。</p>
+                         </div>
+                    </div>
+                </div>
+                <div class="tab_con" id="tab_con23">
+                    <div class="con_title">
+                        <h2>法律法规<span>Laws and regulations</span></h2>
+                    </div>
+                    <div class="bus_body">
+                        <div class="laws">
+                            <div class="laws_list">
+                                <a href="http://www.gov.cn/zhengce/content/2015-09/14/content_10161.htm">
+                                    <h3>国务院关于调整和完善固定资产投资项目资本金制度的通知<span>2015-09-09</span></h3>
+                                </a>
+                                <div class="more">
+                                    <a href="http://www.gov.cn/zhengce/content/2015-09/14/content_10161.htm">
+                                        <img src="images/more.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="laws_list">
+                                <a href="http://www.csrc.gov.cn/pub/zjhpublic/G00306201/201409/t20140926_261084.htm">
+                                    <h3>2014-09-26关于就《证券公司及基金管理公司子公司资产证券化业务管理规定（修订稿）》及配套规则</h3>
+                                    <h3>公开征求意见的通知<span>2015-09-26</span></h3>
+                                </a>
+                                <div class="more">
+                                    <a href="http://www.csrc.gov.cn/pub/zjhpublic/G00306201/201409/t20140926_261084.htm">
+                                        <img src="images/more.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="laws_list">
+                                <a href="http://www.110.com/fagui/law_395272.html">
+                                    <h3>基金管理公司特定多个客户资产管理合同内容与格式准则（2012年修订）<span>2012-11-01</span></h3>
+                                </a>
+                                <div class="more">
+                                    <a href="http://www.110.com/fagui/law_395272.html">
+                                        <img src="images/more.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="laws_list">
+                                <a href="http://www.court.gov.cn/fabu-xiangqing-1696.html">
+                                    <h3>最高人民法院关于审理金融资产管理公司利用外资处置不良债权案件涉及对外担保合同效力问题的通知</h3>
+                                    <h3><span>2010-10-27</span></h3>
+                                </a>
+                                <div class="more">
+                                    <a href="http://www.court.gov.cn/fabu-xiangqing-1696.html">
+                                        <img src="images/more.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="laws_list">
+                                <a href="http://www.gov.cn/flfg/2008-10/28/content_1134207.htm">
+                                    <h3>中华人民共和国企业国有资产法（主席令第五号）<span>2009-05-01</span></h3>
+                                </a>
+                                <div class="more">
+                                    <a href="http://www.gov.cn/flfg/2008-10/28/content_1134207.htm">
+                                        <img src="images/more.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title_list">
+                            <ul>
+                                <li><a href="#">关于土地使用权抵押登记有关问题的通知-----------------------------------------------2006-04-03</a></li>
+                                <li><a href="#">信贷资产证券化试点管理办法-----------------------------------------------------------2006-04-03</a></li>
+                                <li><a href="#">国有资产评估管理办法------------------------------------------------------------------2006-04-03</a></li>
+                                <li><a href="#">金融资产管理公司吸收外资参与资产重组与处置的暂行规定-----------------------------2006-04-03</a></li>
+                                <li><a href="#">关于审理涉及金融资产管理公司收购、管理、处置国有银行<br>不良贷款形成的资产的案件适用法律若干问题的规定------------------------------------2006-04-03</a></li>
+                                <li><a href="#">金融资产管理公司资产处置管理办法(修订)----------------------------------------------2006-04-03</a></li>
+                                <li><a href="#">金融资产管理公司条例------------------------------------------------------------------2006-04-03</a></li>
+                                <li><a href="#">中华人民共和国商业银行法-------------------------------------------------------------2006-04-03</a></li>
+                                <li><a href="#">中华人民共和国公司法------------------------------------------------------------------2006-04-03</a></li>
+                                <li><a href="#">中华人民共和国担保法------------------------------------------------------------------2006-04-03</a></li>
+                                <li><a href="#">中华人民共和国合同法------------------------------------------------------------------2006-04-03</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>    
+    </div>
+    <footer>
+        <div class="footer_con">
+            <div class="con_left">
+                <img src="images/footer.png" alt="">
+            </div>
+            <div class="con_right">
+                <h3><span>浙江言信资产管理有限公司</span> 2016版权所有 Copyright&nbsp;&nbsp;&copy;</h3>
+                <h3>Zhejiang Yanxin assets management co. ,LTD</h3>
+                <h3>浙IPC证P1025751</h3>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<html>
+    <head>
+        <title><title>
+    </head>
+    <body>
+    </body>
+</html>-->

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta content=”yes” name=”apple-mobile-web-app-capable” /> 
+	<meta content=”black” name=”apple-mobile-web-app-status-bar-style” />
+	<meta content=”telephone=no” name=”format-detection” />
+	<title>约个球</title>
+    <style type=text/css>
+     body{
+     	margin:0;
+     	padding: 0;
+        font-family: "微软雅黑";
+        font-size=62.5%;
+        
+     }
+    .main{
+        width:100%;
+        height:100%;
+        max-width: 720px;
+        min-width: 280px;
+        background-color:#fff;
+        margin:0 auto;
+        padding-bottom:25px;
+    }
+
+    .box1{
+        
+        width:310px;
+        height:40px;
+        margin:8px auto;
+        text-align: left;
+        font-size: 1.5em;
+        color: #47c0ea;
+    }
+    #box2{
+        
+        display: block;
+        width: 310px;
+        height: 50px;
+        background-color:#fff;
+        color:#78e2ff;
+        border-style: none;
+        border:1px solid #78e2ff;
+        border-radius: 15px;
+        margin:5px auto;
+        padding:0;
+        line-height:100%;
+        font-size: 1.5em;
+        font-family: "微软雅黑";
+        margin-bottom: 25px;
+        
+
+    }
+    #box3{
+        
+        display: block;
+        width: 120px;
+        height: 42px;
+        background-color:#78e2ff;
+        border-style: none;
+        border:1px solid #78e2ff;
+        border-radius: 30px;
+        /*margin:5px auto;*/
+        float: left;
+        padding:0;
+        line-height:40px;
+        font-size: 1.5em;
+        color:#fff;
+        font-family: "微软雅黑";
+        
+    }
+        a  {text-decoration:none;}
+    .selector1,.selector2,.selector3
+    {
+        border: none;
+        color: #78e2ff;
+        font-family: "微软雅黑";
+        font-size:1em;
+        display: inline-block;
+        /*padding-left:95px;*/
+        width:290px;
+        height:50px;
+        line-height:50px;
+        appearance:none;
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari 和 Chrome */
+    }
+    .selector1
+    {
+        padding-left:83px;
+        text-align: 
+        }
+    .selector2
+    {
+        padding-left:103px;
+            }
+    .selector3
+      {
+        padding-left:103px;
+      }
+    .top{
+          
+        width: 310px;
+        height:60px;
+        margin:0 auto;
+        line-height:60px;
+        text-align: center;
+        font-size: 1.6em;
+        color:#47c0ea; 
+
+    }
+    .foot{
+
+        width: 300px;
+        height: 45px;
+        margin:0 auto;
+        padding-top: 55px;
+    }
+    .foot_left,.foot_right{
+
+        margin:0 15px;
+    }
+
+    </style>
+</head>
+<body>
+	<div class="main">
+    
+     <div class="top"><span>乒乓球</span></div>
+     <form>
+		  <div class="box1">约球时段</div>
+          <button id="box2">
+            <select class="selector1">
+              <option value="1">16:00-18:00</option>
+              <option value="2">16:00-18:00</option>
+              <option value="3">16:00-18:00</option>
+              <option value="4">16:00-18:00</option>
+              <option value="5">16:00-18:00</option>
+              <option value="6">16:00-18:00</option>
+            </select>
+          </button>
+          <div class="box1">集合地点</div>
+          <button id="box2">
+               <select class="selector2">
+                 <option value="1">学活门口</option>
+                 <option value="2">学活门口</option>
+                 <option value="3">学活门口</option>
+                 <option value="4">学活门口</option>
+                 <option value="5">学活门口</option>
+                 <option value="6">学活门口</option>
+               </select>
+          </button>
+          <div class="box1">多少人跟你一起来</div>
+          <button id="box2">
+                 <select class="selector3">
+                   <option value="1">我一个人</option>
+                   <option value="2">我一个人</option>
+                   <option value="3">我一个人</option>
+                   <option value="4">我一个人</option>
+                   <option value="5">我一个人</option>
+                   <option value="6">我一个人</option>
+                 </select>
+          </button>
+          <div class="foot">
+             <a href="3.html"><input class="foot_left" type="button" id="box3" value="返回"></input></a>
+             <a href="5.html"><input class="foot_right" type="button" id="box3" value="提交"></input></a>
+          </div>
+        
+    </form>
+      
+	</div>
+</body>
+</html>

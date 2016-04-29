@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta content=”yes” name=”apple-mobile-web-app-capable” /> 
+	<meta content=”black” name=”apple-mobile-web-app-status-bar-style” />
+	<meta content=”telephone=no” name=”format-detection” />
+	<title>约个球</title>
+    <style type=text/css>
+     body{
+     	margin:0;
+     	padding: 0;
+        font-family: "微软雅黑";
+        font-size=62.5%;
+        
+     }
+    .main{
+    	width:100%;
+    	height:535px;
+        max-width: 720px;
+        min-width: 280px;
+    	background-color:#fff;
+    	margin:0 auto;
+    	text-align: center;       
+    	padding-top:15px; 
+    	padding-bottom:15px; 
+    }
+/*    .banner{
+    	width:320px;
+    	height:190px;
+    	margin:0 auto; 
+        padding-bottom: 30px;
+
+    }*/
+    .box1{
+
+    	width:360px;
+    	height: 90px;
+    	/*line-height:60px;*/
+    	background-color:#fff;
+    	margin:15px auto;
+        border-top:1px #78e2ff solid;
+        border-bottom:1px solid #78e2ff;
+
+    }
+    	
+    .box10,.box01{
+        
+        width: 120px;
+        height：90px;
+        background-color:#fff;
+        float:left;
+        /*margin:0 auto;*/
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        color:#47c0ea;
+        text-align: center;
+        line-height:90px;
+    }
+    .box01{
+
+        background-color:#78e2ff;
+        color: #fff;
+    }
+    .box10_left{
+     
+        width:120px;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+
+    }
+    .box10_right{
+
+        width:120px;
+        height: 45px; 
+        text-align: center;
+        line-height: 45px;
+
+    }
+ 
+
+    .box2,.box3{
+    	width:290px;
+    	height: 70px;
+    	margin:30px auto;
+        font-family: "微软雅黑";
+        font-size:1.5em;
+        /*letter-spacing: 4px;*/
+    	background-color: #fff;
+    }
+    .box2{
+
+        margin-top: 50px;
+    }
+    button{
+
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-family: "微软雅黑";
+        font-size:1em;
+        padding:0;
+        line-height:70px;
+        border-style: none;
+        border:1px solid #78e2ff;
+        border-radius: 35px;
+        color: #78e2ff;
+        background-color:#fff;
+    }
+    a:link{
+        text-decoration: none;
+    }
+    a button{
+        text-decoration: none;
+/*        color: #78e2ff;
+        background-color: #fff;*/
+
+
+    }
+    a button:hover{
+
+        text-decoration: none;
+/*        color: #fff;
+        background-color: #78e2ff;*/
+        
+    }
+    .txt ul li p{
+        display: none;
+    }
+
+    #banner 
+          { 
+            margin:0 auto;
+            width:320px;
+            height: 190px;
+            overflow: hidden; 
+            position: relative;
+        }
+    #list { width: 2240px; height: 190px; position: absolute; z-index: 1;}
+    #list img { float: left;}
+    #buttons { position: absolute; height: 10px; width: 100px; z-index: 2; bottom: 20px; left:110px;}
+    #buttons span { cursor: pointer; float: left; border: 2px solid #fff; width: 8px; height: 8px; border-radius: 50%; background: RGBA(0,0,0,.1); margin-right: 5px;}
+    #buttons .on {  background:#fff;}
+    .arrow { cursor: pointer; display: none; line-height: 30px; text-align: center; font-size: 28px; /*font-weight: bold;*/ width: 30px; height: 30px;  position: absolute; z-index: 2; top:80px; background-color: RGBA(0,0,0,.3); color: #fff;}
+    .arrow:hover { background-color: RGBA(0,0,0,.3);}
+    #banner:hover .arrow { display: block;}
+    #prev { left: 20px;}
+    #next { right: 20px;}
+    </style>
+   <script type="text/javascript">
+
+           window.onload = function () {
+               var banner = document.getElementById('banner');
+               var list = document.getElementById('list');
+               var buttons = document.getElementById('buttons').getElementsByTagName('span');
+               var prev = document.getElementById('prev');
+               var next = document.getElementById('next');
+               var index = 1;
+               var len = 5;
+               var animated = false;
+               var interval = 1600;
+               var timer;
+
+
+               function animate (offset) {
+                   if (offset == 0) {
+                       return;
+                   }
+                   animated = true;
+                   var time = 300;
+                   var inteval = 10;
+                   var speed = offset/(time/inteval);
+                   var left = parseInt(list.style.left) + offset;
+
+                   var go = function (){
+                       if ( (speed > 0 && parseInt(list.style.left) < left) || (speed < 0 && parseInt(list.style.left) > left)) {
+                           list.style.left = parseInt(list.style.left) + speed + 'px';
+                           setTimeout(go, inteval);
+                       }
+                       else {
+                           list.style.left = left + 'px';
+                           if(left>-200){
+                               list.style.left = -320 * len + 'px';
+                           }
+                           if(left<(-320 * len)) {
+                               list.style.left = '-320px';
+                           }
+                           animated = false;
+                       }
+                   }
+                   go();
+               }
+
+               function showButton() {
+                   for (var i = 0; i < buttons.length ; i++) {
+                       if( buttons[i].className == 'on'){
+                           buttons[i].className = '';
+                           break;
+                       }
+                   }
+                   buttons[index - 1].className = 'on';
+               }
+
+               function play() {
+                   timer = setTimeout(function () {
+                       next.onclick();
+                       play();
+                   }, interval);
+               }
+               function stop() {
+                   clearTimeout(timer);
+               }
+
+               next.onclick = function () {
+                   if (animated) {
+                       return;
+                   }
+                   if (index == 5) {
+                       index = 1;
+                   }
+                   else {
+                       index += 1;
+                   }
+                   animate(-320);
+                   showButton();
+               }
+               prev.onclick = function () {
+                   if (animated) {
+                       return;
+                   }
+                   if (index == 1) {
+                       index = 5;
+                   }
+                   else {
+                       index -= 1;
+                   }
+                   animate(320);
+                   showButton();
+               }
+
+               for (var i = 0; i < buttons.length; i++) {
+                   buttons[i].onclick = function () {
+                       if (animated) {
+                           return;
+                       }
+                       if(this.className == 'on') {
+                           return;
+                       }
+                       var myIndex = parseInt(this.getAttribute('index'));
+                       var offset = -320 * (myIndex - index);
+
+                       animate(offset);
+                       index = myIndex;
+                       showButton();
+                   }
+               }
+
+               banner.onmouseover = stop;
+               banner.onmouseout = play;
+
+               play();
+
+           }
+       </script>
+</head>
+<body>
+	<div class="main">
+		<!-- <div class="banner"> -->
+            <div id="banner">
+                <div id="list" style="left: -320px;">
+                    <img src="images/banner.png" alt="1"/>
+                    <img src="images/banner.png" alt="1"/>
+                    <img src="images/banner.png" alt="2"/>
+                    <img src="images/banner.png" alt="3"/>
+                    <img src="images/banner.png" alt="4"/>
+                    <img src="images/banner.png" alt="5"/>
+                    <img src="images/banner.png" alt="5"/>
+                </div>
+                <div id="buttons">
+                    <span index="1" class="on"></span>
+                    <span index="2"></span>
+                    <span index="3"></span>
+                    <span index="4"></span>
+                    <span index="5"></span>
+                </div>
+                <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+                <a href="javascript:;" id="next" class="arrow">&gt;</a>
+            </div>
+		<!-- </div> -->
+		<div class="box1">
+           <a href="2.html"><div class="box10">
+               <div class="box10_left">缺人</div>
+               <div class="box10_right">16</div>
+               </div></a>
+           <a href="5.html"><div class="box01">我的约球</div></a>
+           <a href="2.html"><div class="box10">
+               <div class="box10_left">约球</div>
+               <div class="box10_right">20</div>
+               </div></a>
+           
+		</div>
+		<div class="box2"><a href="2.html"><button>当前缺人的项目</button></a></div>
+		<div class="box3"><a href="3.html"><button>自己喜欢的项目</button></a></div>
+	</div>
+</body>
+</html>

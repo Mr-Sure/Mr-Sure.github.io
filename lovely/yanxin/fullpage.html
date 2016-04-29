@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/index.css">
+<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script> 
+<title>全屏/整屏滚动组件fullPage</title>
+<script>
+   $(document).ready(function(){
+     $(".btn").click(function(){
+        $("#wrap").css("background-color","rgba(0,0,0,.1)");
+       $(".css").css({
+           "visibility":"visible",
+       	"width":"400px",
+       	"height":"600px",
+           "transform": "rotate(360deg)"
+       	});
+     });
+   });
+</script>
+</head>
+<body>
+<div class="logo">
+     褪忆林<br><h4>tuiyilin.com</h4>
+</div>
+<div id="pageContain">
+	<div class="page page1 current">
+		<div class="contain" id="wrap">
+			<p class="txt">
+			    一片关于记忆的树林，藏着无数写满回忆的书本。
+			</p>
+			<a href="#"><div class="btn">
+				褪忆林入口
+			</div></a>
+			<div class="css">
+			     <div class="flip-container" ontouchstart="this.classList.toggle('hover');" id="flip-toggle">
+			     	<div class="flipper">
+			     		<div class="front">
+			     			<h3 id="h3">进入褪忆林，续写回忆</h3>
+			     			<input type="text" placeholder="电子邮箱" id="txt">
+			     			<input type="password" placeholder="账户密码">
+			     			<a href="#"><p id="p">忘记密码？</p></a>
+			     			<a href="http://www.tuiyilin.com"><div class="btn2">登陆</div></a>
+			     			<button class="sexyButton" onclick="document.querySelector('#flip-toggle').classList.toggle('hover');">申请内测</button>
+			     		</div>
+			     		<div class="back" id="back">
+			     			<h3 id="h3">欢迎入驻--褪忆林</h3>
+			     			<form action="">
+			     			    <input type="text" placeholder="你的笔名" id="txt" required="required">
+			     			    <input type="email" placeholder="电子邮箱" required="required">
+			     			    <input type="password" placeholder="账户密码" required="required">
+			     			    <input type="password" placeholder="重复密码" required="required">
+			     			    <button type="submit" class="btn2">申请内测</button>
+			     			</form>
+			     		</div>
+			     	</div>
+			     </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="page page2">
+		<div class="contain">
+			<p class="txt">汐月亭边</p>
+		</div>
+	</div>
+
+	<div class="page page3">
+		<div class="contain">
+			<p class="txt">时光之书3</p>
+		</div>
+	</div>
+
+	<div class="page page4">
+		<div class="contain">
+			<p class="txt">褪忆林4</p>
+		</div>
+	</div>
+
+	<div class="page page5">
+		<div class="contain">
+			<p class="txt">汐月亭5</p>
+		</div>
+	</div>
+</div>
+
+<ul id="navBar">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+<script src="js/fullPage.min.js"></script>
+<script>
+var runPage;
+runPage = new FullPage({
+	id: 'pageContain',
+	slideTime: 800,
+	effect: {
+		transform: {
+			translate: 'X'
+		},
+		opacity: [0, 1]
+	},
+	mode: 'wheel, touch, nav:navBar',
+	easing: 'ease'
+});
+</script>
+
+</body>
+</html>
+<--<html>
+    <head>
+        <title><title>
+    </head>
+    <body>
+    </body>
+</html>-->
+<--

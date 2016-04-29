@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>账号设置</title>
+	<link rel="stylesheet" href="css/pocket.main.css">
+	<link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+	<div class="header">
+        <div class="header_left">
+        <img src="images/logo_white.png" alt="" width="123" height="50">
+        </div>
+		<div class="header_right">
+			    <ul><a href="#"><span>退出登录</span></a></ul>
+			    <ul><a href="#"><span>关注口袋</span></a>
+                   <li   class="focus" style="display:none;">
+                     <img src="images/admin.jpg" alt="" width="100" height="100">
+                   </li>
+			    </ul>
+			    <ul><a href="#"><span>洗衣系统</span></a></ul>
+			    <ul><a href="#"><span>刷水系统</span></a></ul>
+			    <ul>
+			        <a href="#"><span><div class="first">运营中心</div></span></a>
+			    </ul>
+			    <ul>
+			        <a href="#"><span>口袋昵称</span></a>
+			    </ul>
+		</div>
+	</div>
+	<div class="middle">
+       <div class="middle_left">
+       	   <img src="images/admin.jpg" alt="" height="100" width="100">
+       </div>
+       <div class="middle_right">
+         <ul><a href="index.html"><span>个人中心</span></a></ul>
+         <ul><a href="config.html"><span>账号设置</span></a></ul>
+         <ul><a href="#"><span>站内信息</span></a></ul>
+       </div>
+	</div>
+	<div class="main">
+      <div class="sidebar">
+         	<ul class="first2">
+         	    <a href="config.html"><span>账号设置</span></a>
+	        </ul>
+	        <ul>
+	            <a href="safe.html"><span>账号安全</span></a>
+	        </ul>
+            <ul><a href="money.html"><span>财富中心</span></a></ul>
+            <ul><a href="#"><span>管理中心</span></a></ul>
+            <ul><a href="#"><span>管理中心</span></a></ul>
+            <ul><a href="#"><span>管理中心</span></a></ul>
+            <ul><a href="#"><span>管理中心</span></a></ul>
+            <ul><a href="#"><span>管理中心</span></a></ul>
+            <ul><a href="#"><span>管理中心</span></a></ul>
+            <ul><a href="#"><span>管理中心</span></a></ul>
+            <ul><a href="#"><span>管理中心</span></a></ul>
+            <ul><a href="#"><span>管理中心</span></a></ul>
+     </div>
+       	  <form id="form1"  method="post" class="info">
+       	    <!-- <div class="info"> -->
+                 <div class="s1">
+                   <span>修改信息</span>
+                 </div>
+       	         <div class="s_text">
+
+       	          <div class="line">
+       	            <div class="line_left">口袋账号:</div>
+       	            <div class="line_right"><span>95279527</span></div>
+       	          </div>
+       	          <div class="line2">
+       	            <div class="line2_left">口袋昵称:</div>
+       	            <div class="line2_right">
+       	                <input onfocus="nameTips()" onblur="nameCheck()" class="line2_right" maxlength="16" name="txtNickName" type="text" id="txtNickName" value="Sure·绒染" size="30">
+       	            </div>
+       	        </div>
+       	        <div class="line3">
+       	            <div class="line3_left">微信号码:</div>
+       	            <div class="line3_right">
+       	                <input class="line3_right" name="txtQQ" type="text" id="txtQQ" value="1335102719">
+       	            </div>
+       	        </div>
+       	          <div class="line">
+       	            <div class="line_left">口袋账号:</div>
+       	            <div class="line_right"><span>95279527</span></div>
+       	          </div>
+       	          <div class="line2">
+       	            <div class="line2_left">口袋昵称:</div>
+       	            <div class="line2_right">
+       	                <input onfocus="nameTips()" onblur="nameCheck()" class="line2_right" maxlength="16" name="txtNickName" type="text" id="txtNickName" value="Sure·绒染" size="30">
+       	            </div>
+       	        </div>
+       	        <div class="line3">
+       	            <div class="line3_left">微信号码:</div>
+       	            <div class="line3_right">
+       	                <input class="line3_right" name="txtQQ" type="text" id="txtQQ" value="1335102719">
+       	            </div>
+       	        </div>
+                
+                <div class="button"><input type="submit" value="确认修改"></div>
+               
+               </div>
+               <div class="photo">
+                   <a href="###" class="set_photo_select">
+                       <img id="headimage" src="images/admin.jpg" width="200" height="200" />
+                       <!-- <span class="set_photo_text">上传头像</span> -->
+                   </a>
+                     <form id="headUplaod" action="#" enctype="multipart/form-data"  method="post">
+                       <input class="album_add_pic" type="file" id="fileUploadHead" name="fileUploadHead" />
+                     </form>
+                   <span class="gray">（请选择图片文件png，jpg，gif格式，5M以内，建议像素大小为300px*300px）</span>
+               </div>
+            </div>
+           </form>
+ </div>
+ <div class="foot">
+      <span>杭州杂丛科技有限公司 版权所有&copy;2015</span>
+ </div>
+
+ <script type="text/javascript">
+     init(document.getElementById('province'), document.getElementById('city'), '浙江省', '杭州市');
+
+         b_year = '1993';
+         b_month = '03';
+         b_day = '17';
+         $(document).ready(function(){
+         SetTag("#sex ul li","tagSex",1,"hp_jobs_clo");
+         SetTag("#profession ul li","tagProfession",3,"hp_jobs_clo");
+         SetTag("#language ul li","tagLanguage",3,"hp_jobs_clo");
+         SetTag("#style ul li","tagStyle",5,"hp_jobs_clo");
+         InitTag("#sex ul li","tagSex","hp_jobs_clo");
+         InitTag("#profession ul li","tagProfession","hp_jobs_clo");
+         InitTag("#language ul li","tagLanguage","hp_jobs_clo");
+         InitTag("#style ul li","tagStyle","hp_jobs_clo");
+         $(".big_blue_btn").click(function(){
+             if(nameCheck()>0)
+                 return false;
+
+             if ($('#born').val().length == 0) {
+                 $.ksPlugin.tips("请选择您的生日");
+                 return false;
+             }
+             $("#form1").submit();
+
+         });
+
+         var headUplaodid = 'headUplaodid-loading';
+         var headUplaodobj;
+         $("#headUplaod").iframePostForm({
+             iframeID: 'iframe-post-form2',
+             json: true,
+             post: function () {
+                 $("#fileUploadHead").hide();
+                 headUplaodobj = $.ksPlugin.showLoading(headUplaodid,'上传中');
+                 //$("#msg0").html('图片上传中...');
+             },
+             complete: function (response) {
+
+                 if (response.isSuccess) {
+                     //$("#msg0").html('上传成功');
+                     $.getJSON(alias + 'handler/savehead','head='+response.data.file,function(data){
+                         if(data.code==0)
+                         {
+                             setTimeout(function(){
+                                 $.ksPlugin.hideLoading(headUplaodid,headUplaodobj);
+                                 $.ksPlugin.success('上传成功');
+                                 $("#headimage").attr("src", getPic(response.data.file,300,250));
+                                 $("#DefaultHead").val(response.data.file);
+                             },1000);
+                         }
+                         else
+                         {
+                             $.ksPlugin.hideLoading(headUplaodid,headUplaodobj);
+                             $.ksPlugin.success('上传失败');
+                         }
+
+                     });
+
+
+                     //$("#fileUploadHead").val('').hide();
+                 } else {
+                     $.ksPlugin.hideLoading(headUplaodid,headUplaodobj);
+                     $.ksPlugin.alert({content:response.message});
+                 }
+                 $("#fileUploadHead").show();
+             }
+         });
+         $("#fileUploadHead").bind("change", function () {
+             $("#headUplaod").submit();
+         });
+         SetDate();
+     });
+
+     function nameTips()
+     {
+         $("#txtNickName").parent().removeClass('tip_error');
+         $("#txtNickName").next().next().text('（昵称限4-16个字符，1个汉字为2个字符）');
+     }
+
+     function nameCheck()
+     {
+         if($.trim($("#txtNickName").val()).length==0)
+         {
+             $("#txtNickName").parent().addClass('tip_error');
+             $("#txtNickName").next().next().text('昵称不能为空');
+             return 1;
+         }
+     }
+
+     function SetDate() {
+         $("#born").val($("#YYYY").val() + "-" + $("#MM").val() + "-" + $("#DD").val());
+     }
+     function ClearDate() {
+         $("#born").val('');
+     }
+ </script>
+ 
+</body>
+</html>
