@@ -1,1 +1,165 @@
-
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>口袋大学</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		body{
+			font-family: "微软雅黑";
+			font-size: 16px;
+			color: rgba(0,0,0,.6);
+		}
+		header{
+			width: 100%;
+			height: auto;
+			margin-bottom: 30px;
+		}
+		header h2{
+			padding: 10px 0;
+			font-weight: normal;
+			text-align: center;
+			color: #fff;
+			font-size: 1.4em;
+			background-color: #e78170;
+		}
+		h3{
+			font-weight: normal;
+			font-size: 1em;
+		}
+		canvas{
+			font-family: "微软雅黑";	
+			font-weight: bold;
+			display: none;
+		}
+		#scream{
+			display: none;
+		}
+		.hide{
+			display: none;
+		}
+		.hide h3{
+			margin-bottom: 20px;
+			text-align: center;
+			color: #e98f8c;
+		}
+		.hide img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		.toggle{
+			width: 100%;
+			height: auto;
+			margin-top:10px;
+		}
+		.toggle h3{
+			text-align: center;
+			line-height: 30px;
+		}
+		.toggle input{
+			width: 65%;
+			height: 20px;
+			padding:5px;
+			font-size: 1em;
+			border-style: none;
+			line-height: 20px;
+			margin-top: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0,0,0,.2);
+			color: rgba(0,0,0,.6);
+		}
+		select{
+			display: inline-block;
+			width: 15%;
+			height: 25px;
+			margin-top: 20px;
+			font-family: "微软雅黑";
+			color: rgba(0,0,0,.6);
+		}
+		.button{
+			width: 100px;
+			height: 30px;
+			margin:0 auto;
+			margin-top: 25px;
+			text-align: center;
+			line-height: 30px;
+			border:1px solid rgba(0,0,0,.5);
+			border-radius:5px; 
+		}
+		.hide-footer h4{
+			font-weight: normal;
+			font-size: 1em;
+			color: rgba(0,0,0,.5);
+			text-align: center;
+			margin:20px auto;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h2>准考证自取处</h2>
+	</header>
+	<div class="toggle">
+		<h3 style="font-size: 1.2em;margin-bottom:10px; ">请输入你的专属信息</h3>
+		<h3><input type="text" id="name" placeholder="请输入您的姓名"></h3>
+		<h3>
+			<span>请选择性别：</span>
+			<select name="" id="sex">
+				<option value="男">男</option>
+				<option value="女">女</option>
+			</select>
+		</h3>
+		<h3><input type="text" id="place" placeholder="请输入你的考场"></h3>
+		<div class="button">一键领取</div>
+		<img id="scream" src="images/pocket-card.png" alt="" width="800" height="1070">
+		<canvas id="myCanvas" width="800" height="1070" style="border:1px solid #d3d3d3;">
+			<p>您的浏览器不支持 HTML5 canvas 标签。</p>
+		</canvas>
+	</div>
+	<div class="hide">
+		<h3>Tips: 长按图片即可保存至手机</h3>
+		<img alt="" id="new" width="100%" height="auto">
+		<div class="hide-footer">
+			<h4>Lovely Created by Sure .</h4>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script>
+		var c=document.getElementById("myCanvas");
+		var ctx=c.getContext("2d");
+		var img=document.getElementById("scream");
+		$(".button").click(function(){
+			var name = $("#name").val();
+			var sex = $("#sex").val();
+			var place = $("#place").val();
+			if (name== ""|| sex== "" || place == "") {
+				alert("请检查是否填写完整，谢谢~");
+			} else{
+				console.log(name + sex + place);
+				alert("恭喜您，生成成功!");
+				$(".toggle").css({
+					"display":"none"
+				});
+				$(".hide").css({
+					"display":"block"
+				});
+				ctx.drawImage(img,0,0,800,1070);
+				ctx.font="400 30px 宋体";
+				ctx.fillText(name,408,417);
+				ctx.fillText(sex,640,417);
+				ctx.fillText(place,408,486);
+				var srcData = c.toDataURL();
+				$("#new").attr("src",srcData);
+			};
+		});
+	</script>
+</body>
+</html>
