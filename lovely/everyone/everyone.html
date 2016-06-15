@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>Wilddog in Vue</title>
+	<style>
+		html{
+			margin:0;
+			padding:0;
+		}
+		body{
+			font-family: "微软雅黑";
+			font-size: 1em;
+		}
+		.myTitle{
+			width: 90%;
+			height: 40px;
+			margin:0 auto;
+			margin-bottom: 20px; 
+			line-height: 40px;
+			font-weight: normal;
+			text-align: center;
+		}
+		.myTitle span{
+			display: block;
+			width: 50px;
+			height: 30px;
+			/*padding: 5px;*/
+			margin-top: 2px;
+			line-height: 30px;
+			border:1px solid #e4726e;
+			border-radius: 5px;
+			float: right;
+			color: #e4726e;
+			font-size: 1em;
+		}
+		.border{
+			width: 100%;
+			height: 1px;
+			margin:0 auto;
+			font-weight: normal;
+			text-align: center;
+			border-bottom: 1px dashed #e4726e;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h3 class="myTitle">一个有脾气的墙<span id="start">爬墙</span></h3>
+		<div class="data-list"></div>
+	</main>
+	<script src="js/lib/vue.js"></script>
+	<script src="js/lib/wilddog.min.js"></script>
+	<script src="js/lib/wildvue.min.js"></script>
+	<script src="js/lib/jquery.min.js"></script>
+	<script>
+		var ref = new Wilddog("https://sure.wilddogio.com/");
+		ref.child("public").on("value", function(snap) {
+			var data = snap.val();
+			console.log(data);
+			var li = "";
+			if (data == undefined) {
+				$(".data-list").html('<p id="info">恭喜你,已无任何数据~</p>');
+			} else {
+				$.each(data, function(i, v) {
+					console.log(v);
+					li += v.news+'<h5 class="border"><h5>';
+				});
+				$(".data-list").html(li);
+			};
+			console.log("加载完毕！");
+		});
+		$("#start").click(function(){
+			alert("我就知道，你一定会点我的~");
+			window.location.href = 'public.html';
+		});
+	</script>
+</body>
+</html>
