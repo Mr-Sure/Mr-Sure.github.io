@@ -1,0 +1,77 @@
+body {
+	max-width: 450px;
+	margin:0 auto;
+	font-family: "微软雅黑";
+	font-size: 1em;
+	background-color: #fff;
+}
+.wangEditor-mobile-menu-container {
+	text-shadow: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.title {
+	padding: 15px 0;
+	text-align: center;
+	opacity: 0.7;
+}
+
+.container {
+	width: 100%;
+	height: 420px;
+	border-radius: 5px;
+	background-color: #fff;
+	text-align: left;
+/*	box-shadow: 0 0 10px #ccc;*/
+	text-shadow: none;
+}
+
+footer {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+	opacity: 0.6;
+	margin-top: 10px;
+}
+
+#info {
+	margin-top: 30px;
+	text-align: center;
+	color: #e98f8c;
+}
+
+.data-list {
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	text-shadow: none;
+	box-sizing: border-box;
+}
+#title{
+	display: block;
+	width: 90%;
+	height: 40px;
+	margin:0 auto;
+	font-family: "微软雅黑";
+	font-size: 1.5em;
+	border-style: none;
+	border-bottom: 1px solid rgba(0,0,0,.3);
+}
+.wangEditor-mobile-txt{
+	width: 90%;
+	height: 100%;
+	padding:10px 0;
+	margin:0 auto;
+}
+.sureBtn{
+	font-size: 1.2em;
+	color: #e4726e;
+}
+.sureBtn span:nth-child(2){
+	float: right;
+	margin-right: 5%;
+	color: rgba(0,0,0,.5);
+}
