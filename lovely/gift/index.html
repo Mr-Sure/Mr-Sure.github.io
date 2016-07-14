@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<title>贺卡</title>
+	<link rel="stylesheet" href="css/mui.min.css">
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			width: 100%;
+			height: 100%;
+		}
+		h2{
+			font-family: "楷体";
+		}
+		main{
+			position: absolute;
+			z-index: -1;
+		}
+		main img{
+			width: 100%;
+			height: auto;
+			opacity: .9;
+		}
+		.content{
+			position: relative;
+			top: 450px;
+			left:0px;
+		}
+		.content h3{
+			padding-left: 10px;
+			font-weight: normal;
+			font-family: "微软雅黑";
+			font-size: .8rem;
+			line-height: 2em;
+			box-sizing:border-box;
+			color: rgba(0,0,0,.8);
+		}
+		.mui-slider{
+			width: 94%;
+			position: relative;
+			top: 300px;
+			left:3%;
+		}
+		.box{
+			margin-top: 80px;
+			margin-left: 8%;
+		}
+		audio{
+			opacity: .6;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<img src="images/bg.jpg" alt=""> 
+	</main>
+	<div class="mui-slider">
+	  <div class="mui-slider-group mui-slider-loop">
+	    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/5.jpg" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/1.jpg" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/2.jpg" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/3.jpg" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/4.jpg" /></a></div>
+	    <div class="mui-slider-item"><a href="#"><img src="images/5.jpg" /></a></div>
+	    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/1.jpg" /></a></div>
+	  </div>
+	</div>
+	<div class="content">
+		<h3>送呈 亲朋好友 台启</h3>
+		<h3>谨定于2016年7月16日（星期六）</h3>
+		<h3>举办本人研究生金榜题名庆功囍宴</h3>
+		<h3>敬请</h3>
+		<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;光临</h3>
+		<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贾媛媛 敬请</h3>
+		<h3>时间：7月16日 上午9：00</h3>
+		<h3>地点：沙后所西关村陈林饭店</h3>
+		<div class="box">
+			<audio autoplay="autoplay" controls="controls" >
+			  <source src="images/qing.mp3"  type="audio/mpeg">
+			</audio>
+		</div>
+	</div>
+	<script src="js/mui.min.js"></script>
+</body>
+</html>
