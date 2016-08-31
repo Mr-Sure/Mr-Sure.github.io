@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+		<link href="http://weixin.kekeschool.com/school_service/getup21/css/index.css" rel="stylesheet" type="text/css" />
+		<title>21天起床计划</title>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript">
+			wx.config({
+				debug: false,
+				appId: 'wxa40a15c218443e09',
+				timestamp: 1472620658,
+				nonceStr: '3xYnwv2zHPQEiDHx',
+				signature: '366d880152a0ee3cd6d64a85f5e8771d47619bd3',
+				jsApiList: [
+				  // 所有要调用的 API 都要加到这个列表中
+				  'onMenuShareAppMessage',
+				  'onMenuShareQZone',
+				  'onMenuShareQQ',
+				  'onMenuShareTimeline'
+				]
+			  });
+			  wx.ready(function () {
+				// 在这里调用 API
+				wx.onMenuShareTimeline({
+					title: '早起的鸟儿有虫吃，快来一起参加南京高校21天起床计划吧！', // 分享标题
+					link: 'http://weixin.kekeschool.com/school_service/getup21/index.php', // 分享链接
+					imgUrl: 'http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wCQa1rJ3AZfrjofibQoeLrk.jpg', // 分享图标
+					success: function () { 
+						// 用户确认分享后执行的回调函数
+					},
+					cancel: function () { 
+						// 用户取消分享后执行的回调函数
+					}
+				});
+				
+				wx.onMenuShareAppMessage({
+					title: '早起的鸟儿有虫吃，快来一起参加南京高校21天起床计划吧！', // 分享标题
+					desc: '坚持早起21天，遇见更好的自己！', // 分享描述
+					link: 'http://weixin.kekeschool.com/school_service/getup21/index.php', // 分享链接
+					imgUrl: 'http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wCQa1rJ3AZfrjofibQoeLrk.jpg', // 分享图标
+					type: '', // 分享类型,music、video或link，不填默认为link
+					dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+					success: function () { 
+						// 用户确认分享后执行的回调函数
+					},
+					cancel: function () { 
+						// 用户取消分享后执行的回调函数
+					}
+				});
+				
+				wx.onMenuShareQQ({
+					title: '早起的鸟儿有虫吃，快来一起参加南京高校21天起床计划吧！', // 分享标题
+					desc: '坚持早起21天，遇见更好的自己！', // 分享描述
+					link: 'http://weixin.kekeschool.com/school_service/getup21/index.php', // 分享链接
+					imgUrl: 'http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wCQa1rJ3AZfrjofibQoeLrk.jpg', // 分享图标
+					success: function () { 
+					   // 用户确认分享后执行的回调函数
+					},
+					cancel: function () { 
+					   // 用户取消分享后执行的回调函数
+					}
+				});
+
+				wx.onMenuShareQZone({
+					title: '早起的鸟儿有虫吃，快来一起参加南京高校21天起床计划吧！', // 分享标题
+					desc: '坚持早起21天，遇见更好的自己！', // 分享描述
+					link: 'http://weixin.kekeschool.com/school_service/getup21/index.php', // 分享链接
+					imgUrl: 'http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wCQa1rJ3AZfrjofibQoeLrk.jpg', // 分享图标
+					success: function () { 
+					   // 用户确认分享后执行的回调函数
+					},
+					cancel: function () { 
+						// 用户取消分享后执行的回调函数
+					}
+				});
+			  });
+		</script>
+	</head>
+	<body>
+		
+		<div id="head">
+			<table id="title">
+				<tr>
+					<td>
+						<div id="title1"><span>21</span>天</div>
+					</td>
+					<td>
+						<div id="titler">
+							<div id="title2">迹·忆 21天早起计划</div>
+							<div id="title3">2016/9/1 开始</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="bodyone">
+			<div id="all_people">
+				389人已参加
+			</div>
+			<!--头像展示区，展示每天前20人头像，或者随机展示，根据算法调整-->
+			<div id="heading_pic">
+				<img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wCQa1rJ3AZfrjofibQoeLrk.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' ">
+				<img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wLsKWC-CrYFnW6QGGGjMTWk.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wHMmBr6xwurMxkARrqyJCSg.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wDUkfQktco205lM0WkmagFw.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wP8-zzxBg_zTPeDZUOBH9W0.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wEAsM0jAzwV7Oww3qpU1fNU.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wBRELgfpHdizD7-R5xZ8LWM.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wEk9-_CdQEsRM2AKEqY7mC0.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wPW6LY0tvTJt48cMZGyqza4.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wB7MU7qCU3qVqukz_WUc7Ho.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wMX0Aq1AhTK7kfxUbPF8mUY.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wACql3Z2Q6wg45-jNtrBHaM.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wLEbIq2TQYF4QGXPc6pByfg.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wJePMWbi5pCQ5w5wcC09zv4.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wFMMMQJNY0MEVtH3g7Z9NVY.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wPeMeVx6JZty_e7fSW7k3PQ.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wCgOZ3yKmG9WdzetckpSPQw.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wGY7RVc_xCDf1Kse_7j9UVc.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wFVnDBhL14WHS5VkwpFmmaw.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;"><img src="http://weixin.kekeschool.com/school_service/getup21/heading_pic/oi2i0wGQr34VPb4Mt_FJvTm4XRB4.jpg" onerror= "javascript:this.src='http://weixin.kekeschool.com/school_service/getup21/heading_pic/img.jpg' " style="margin-left:2px;">			</div>
+			<!--介绍展示区-->
+			<div id="introducehide">
+				1、每天早上5：00~8：00打卡，全额积分；8：00~10：00打卡，积分减半；
+				<br>
+				2、连续第N天打卡，当天奖励10×N积分...
+				<div id="more" onclick="showmore();">查看更多</div>
+			</div>
+			<div id="introduceshow">
+				1、每天早上5：00~8：00打卡，全额积分；8：00~10：00打卡，积分减半；
+				<br>
+				2、连续第N天打卡，当天奖励10×N积分。连续打卡超过21天，每天固定奖励150分。打卡中断后，再次打卡奖励积分重新从10分开始计算，总积分累积。
+				<br>
+				3、参加活动即有机会赢Kindle、小米移动电源等好礼！
+				<br>
+					<span style="color:#79a6c7">点击查看详细活动介绍</span>
+				<br>
+				<div id="more" onclick="hidemore();">收起</div>
+			</div>
+			<button type="button" class="btn btn-info" id="send_yaoqingka" onclick="send_yaoqingka()" style="width:49%;height:40px">生成邀请卡</button>
+			<button type="button" class="btn btn-warning" onclick='window.location.href="jifenshangcheng.php"' style="width:49%;height:40px">积分兑换</button>
+		</div>
+		<div id="richengbiao" >日程表</div>
+		<div id="richeng_item" onclick='window.location.href="detail.php?code=1472707058&times=1";'><div class="number ">1</div><div class="time">9月1日 5:00-10:00</div><div class="time time1">21天早起计划 第1天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1472793458&times=1";'><div class="number ">2</div><div class="time">9月2日 5:00-10:00</div><div class="time time1">21天早起计划 第2天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1472879858&times=1";'><div class="number ">3</div><div class="time">9月3日 5:00-10:00</div><div class="time time1">21天早起计划 第3天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1472966258&times=1";'><div class="number ">4</div><div class="time">9月4日 5:00-10:00</div><div class="time time1">21天早起计划 第4天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1473052658&times=1";'><div class="number ">5</div><div class="time">9月5日 5:00-10:00</div><div class="time time1">21天早起计划 第5天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1473139058&times=1";'><div class="number ">6</div><div class="time">9月6日 5:00-10:00</div><div class="time time1">21天早起计划 第6天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1473225458&times=1";'><div class="number ">7</div><div class="time">9月7日 5:00-10:00</div><div class="time time1">21天早起计划 第7天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1473311858&times=1";'><div class="number ">8</div><div class="time">9月8日 5:00-10:00</div><div class="time time1">21天早起计划 第8天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1473398258&times=1";'><div class="number ">9</div><div class="time">9月9日 5:00-10:00</div><div class="time time1">21天早起计划 第9天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1473484658&times=1";'><div class="number ">10</div><div class="time">9月10日 5:00-10:00</div><div class="time time1">21天早起计划 第10天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1473571058&times=1";'><div class="number ">11</div><div class="time">9月11日 5:00-10:00</div><div class="time time1">21天早起计划 第11天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1473657458&times=1";'><div class="number ">12</div><div class="time">9月12日 5:00-10:00</div><div class="time time1">21天早起计划 第12天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1473743858&times=1";'><div class="number ">13</div><div class="time">9月13日 5:00-10:00</div><div class="time time1">21天早起计划 第13天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1473830258&times=1";'><div class="number ">14</div><div class="time">9月14日 5:00-10:00</div><div class="time time1">21天早起计划 第14天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1473916658&times=1";'><div class="number ">15</div><div class="time">9月15日 5:00-10:00</div><div class="time time1">21天早起计划 第15天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1474003058&times=1";'><div class="number ">16</div><div class="time">9月16日 5:00-10:00</div><div class="time time1">21天早起计划 第16天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1474089458&times=1";'><div class="number ">17</div><div class="time">9月17日 5:00-10:00</div><div class="time time1">21天早起计划 第17天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1474175858&times=1";'><div class="number ">18</div><div class="time">9月18日 5:00-10:00</div><div class="time time1">21天早起计划 第18天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1474262258&times=1";'><div class="number ">19</div><div class="time">9月19日 5:00-10:00</div><div class="time time1">21天早起计划 第19天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1474348658&times=1";'><div class="number ">20</div><div class="time">9月20日 5:00-10:00</div><div class="time time1">21天早起计划 第20天</div><div class="item_right ">未开始</div></div><div id="richeng_item" onclick='window.location.href="detail.php?code=1474435058&times=1";'><div class="number ">21</div><div class="time">9月21日 5:00-10:00</div><div class="time time1">21天早起计划 第21天</div><div class="item_right ">未开始</div></div>		<!--<div id="richeng_item" >
+			<div class="number">01</div>
+			<div class="time">04月26日 7:00</div>
+			<div class="time time1">21天早起计划 第1天</div>
+			<div class="item_right">已错过</div>
+		</div>
+		<div id="richeng_item" >
+			<div class="number">02</div>
+			<div class="time">04月27日 5:00</div>
+			<div class="time time1">21天早起计划 第2天</div>
+			<div class="item_right">已错过</div>
+		</div>
+		<div id="richeng_item" >
+			<div class="number number_active">03</div>
+			<div class="time">04月28日 7:00</div>
+			<div class="time time1">21天早起计划 第3天</div>
+			<div class="item_right item_right_active">3小时后<br>开始</div>
+		</div>-->
+		<div style="margin:10px 10px 20px 10px;">
+			<button type="button"  id="joinplan" class="btn btn-primary" style="width:100%;height:45px;font-size:18px;" onclick="joinplan()">我要参加</button>			
+		</div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+		   aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-content">
+				 <div class="modal-header">
+					<button type="button" class="close" 
+					   data-dismiss="modal" aria-hidden="true">
+						  &times;
+					</button>
+					<h4 class="modal-title" id="myModalLabel">
+					   欢迎扫描二维码加入我们哦
+					</h4>
+				 </div>
+				 <div class="modal-body">
+					<div style="text-align:center">
+						<img id="pic" src="http://weixin.kekeschool.com/school_service/getup21/ewm.jpg" width="220px">
+					</div>
+				 </div>
+		</div><!-- /.modal -->
+		<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="http://weixin.kekeschool.com/school_service/getup21/js/index.js?id=123"></script>
+	</body>
+</html>
