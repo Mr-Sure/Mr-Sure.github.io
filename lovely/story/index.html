@@ -1,0 +1,1267 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>粉色信笺</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<!--   <meta name="apple-itunes-app" content="app-id=888237539, app-argument=jianshu://notes/2569395"> -->
+  <link rel="shortcut icon" type="image/x-icon" href="http://tuiyilin.com/favicon.ico">
+  <style type="text/css">
+  html {
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color:transparent;
+  }
+  body{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'lucida grande','lucida sans unicode',lucida,helvetica,'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei',sans-serif;
+    box-sizing: border-box;
+  }
+  .hide { display: none }
+  .container {
+    margin: 0 auto;
+    padding: 0 15px 55px;
+  }
+  .container a { color: #28a1c5 !important }
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    margin: .7em 0;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .content h1 { font-size: 24px }
+  .content h2 { font-size: 22px }
+  .content h3 { font-size: 20px }
+  .content h4 { font-size: 18px }
+  .content h5,
+  .content h6 { font-size: 17px }
+  .content img { max-width: 100% }
+  .content hr {
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 25px;
+  }
+  /* 引用的样式 */
+  .content blockquote {
+    margin: 0 0 25px 0;
+    padding: 20px;
+    font-weight: 100;
+    word-break: break-all;
+    border-left: 4px solid #999;
+    background-color: #f6f6f6;
+  }
+  .content blockquote p:last-child { margin-bottom: 0 }
+  /* 列表的样式 */
+  ul,ol {
+    padding: 0;
+    margin: 0 0 25px 25px;
+  }
+  ol li,
+  ul li { line-height: 1.7em }
+  ol li ol,
+  ul li ul { margin-top: 15px }
+  /*代码块和inline代码的样式*/
+  .content pre {
+    padding: 10px 10px 8px;
+    margin-bottom: 25px;
+    overflow: auto;
+    word-wrap: normal;
+    word-break: break-all;
+    white-space: pre;
+    background-color: #f5f5f5;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .content pre code {
+    padding: 0;
+    background-color: transparent;
+    white-space: pre;
+  }
+  .content code {
+    padding: 2px 4px;
+    background-color: #fbeded;
+    border: none;
+    white-space: pre-wrap;
+    color: #dd6751;
+    font-size: 12px;
+  }
+  /* 表单的样式 */
+  .content table {
+    margin-bottom: 25px;
+    border: 1px solid #d9d9d9;
+    border-collapse: collapse;
+    border-left: none;
+  }
+  .content table thead th { vertical-align: bottom }
+  .content table th { font-weight: bold }
+  .content table th,
+  .content table td {
+    padding: 8px;
+    border-left: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+    line-height: 1.5em;
+    vertical-align: top;
+  }
+  /*文章图片视频和注释样式*/
+  .image-package,
+  .video-package {
+    margin: 0 auto 25px;
+    line-height: 1;
+    text-align: center;
+  }
+  .video-package {
+    position: relative;
+  }
+  .image-package .image-caption,
+  .video-package .video-description {
+    display: inline-block;
+    min-width: 20%;
+    min-height: 20px;
+    border-bottom: 1px solid #d9d9d9;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 14px;
+    color: #999;
+    font-style: italic;
+    line-height: 150%;
+  }
+  .video-package .video-description {
+    display: none;
+  }
+  .video-package div.video-player {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    overflow: hidden;
+  }
+  .video-package div.video-placeholder {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid black;
+  }
+  .image-package .image-caption:empty,
+  .video-package .video-description:empty { display: none; }
+  .video-package .video-placeholder-area {
+    position: relative;
+    display: inline-block;
+    min-height: 110px;
+    padding: 10px;
+    padding-left: 110px;
+    box-sizing: border-box;
+    border: 1px solid #d5d5d5;
+    text-align: left;
+    cursor: pointer;
+  }
+  .video-package .video-placeholder-area:after {
+    content: ' ';
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    display: block;
+    width: 90px;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(http://cdn0.jianshu.io/assets/play-btn-5f01e4b09047a9abd15f4226ccadfb6d.png);
+    background-position: 20px;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    transition: all linear 100ms;
+  }
+  .video-package .video-placeholder-area .video-cover {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    display: block;
+    width: 90px;
+    height: 90px;
+    opacity: 0.8;
+    transition: opacity linear 100ms;
+  }
+  .video-package .video-close-button,
+  .video-package .video-provider-button {
+    float: left;
+    font-size: 14px;
+    padding: 0px;
+    margin-top: 10px;
+    line-height: 14px;
+    cursor: pointer;
+    transition: opacity linear 100ms;
+  }
+  .video-package .video-provider-button {
+    float: right;
+  }
+  .video-package i.fa {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-size: 14px;
+  }
+  .video-package i.fa.fa-eject {
+    background-image: url(http://cdn0.jianshu.io/assets/eject-d-94d0034513f49d42b11af32b0a9d9c03.png);
+  }
+  .reader-night-mode .video-package i.fa.fa-eject {
+    background-image: url(http://cdn0.jianshu.io/assets/eject-n-1106331c35e104eec98b1d9703cb8204.png);
+  }
+  .video-package i.fa.fa-external-link {
+    background-image: url(http://cdn0.jianshu.io/assets/extlink-d-cbb3df2abac02c5d77455e5fde6a715f.png);
+  }
+  .reader-night-mode .video-package i.fa.fa-external-link {
+    background-image: url(http://cdn0.jianshu.io/assets/extlink-n-a61a0537679e0d6fd31ec1dc3a117e2c.png);
+  }
+  /*top*/
+  .top {
+    height: 46px;
+    line-height: 46px;
+    font-size: 12px;
+    color: #e38b7b;
+    background: url(http://cdn0.jianshu.io/assets/wechat_img/dividingline@2x-39b9990b5258de8b5ed6810ff3e0f2b6.png) repeat-x bottom;
+    background-size: 13px;
+  }
+  .top img { width: 117px }
+  .top .app-android {
+    position: relative;
+    top: 8px;
+    float: right;
+    width: 80px;
+  }
+  /* 文章标题*/
+  .title {
+    margin-bottom: 20px;
+    word-break: break-word;
+    font-size: 32px;
+    color: #2f2f2f;
+  }
+  /* 文章信息*/
+  .article-info {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #b1b1b1;
+  }
+  .article-info .label {
+    display: inline-block;
+    padding: 2px 4px;
+    border: 1px solid #e78170;
+    border-radius: 3px;
+    background: none;
+    color: #e78170;
+    font-size: 11px;
+    font-weight: normal;
+    text-shadow: none;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .article-info a { margin-right: 10px }
+  /* 内容部分*/
+  .content {
+    width: 100%;
+    font-size: 17px;
+    line-height: 1.5em;
+    font-weight: 100;
+    color: #555;
+    word-wrap: break-all;
+  }
+  a { text-decoration: none }
+  .content img { max-width: 100% }
+  .content p {
+    margin: 0 0 20px 0;
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
+  .top-title {
+    padding-left: 15px;
+    margin: 0 -15px 30px;
+    background-color: #f3f3f3;
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: normal;
+    color: #e78170;
+    text-align: left;
+  }
+  /* 分享 */
+  .share {
+    margin: 40px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #e78170;
+  }
+  .share a {
+    margin: 0 10px;
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #eee;
+    text-align: center;
+    line-height: 51px;
+  }
+  .share img { height: 19px }
+  /* 评论 */
+  .comment {
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .comment:nth-child(2) { padding-top: 0 }
+  .comment-top { margin-bottom: 10px }
+  .comments .user-name {
+    font-size: 14px;
+    color: rgba(40, 161, 197, 1) !important;
+  }
+  .comments .like {
+    float: right;
+    padding: 2px 0 0 20px;
+    background: url(http://cdn0.jianshu.io/assets/wechat_img/icon_like-141bd3abbf0bcca96ad00b2b0f910d50.png) 1px 3px no-repeat;
+    background-size: 15px;
+    font-size: 12px;
+    color: #999;
+  }
+  .comments p {
+    margin: 0;
+    color: #555;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+  .child-comments {
+    margin: 20px 0 10px;
+    border-top: 1px dashed #d9d9d9;
+    border-left: 2px solid #d9d9d9;
+  }
+  .child-comment {
+    padding: 16px 0 16px 10px;
+    border-bottom: 1px dashed #d9d9d9;
+    font-size: 14px;
+  }
+  .download {
+    margin-top: 25px;
+    color: #49be38;
+    text-align: center;
+  }
+  .download .btn {
+    padding: 10px 0;
+    margin-top: 20px;
+    display: block;
+    color: #fff !important;
+  }
+  .btn img {
+    position: relative;
+    top: 2px;
+    height: 17px;
+    margin-right: 10px;
+  }
+  /*打赏*/
+  .support-author {
+    margin: 45px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+  }
+  .support-author .btn-pay {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-bottom: 17px;
+    background: #f69a48;
+    border-radius: 4px;
+    color: #fff !important;
+    font-size: 14px;
+  }
+  .avatar-list .avatar {
+    margin: 0 2px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    line-height: 0;
+  }
+  .avatar-list .avatar img {
+    width: 36px;
+    height: 36px;
+  }
+  .pay-modal {
+    z-index: 99999;
+    position: relative;
+    text-align: center;
+  }
+  .pay-modal .modal-top {
+    height: 80px;
+    background-color: #f69a48;
+    border-radius: 0% 0% 50% 50%/0% 0% 90% 90%;
+  }
+  .pay-modal .author {
+    position: relative;
+    top: -30px;
+    padding: 0 15px;
+    color: #888;
+  }
+  .pay-modal h3 {
+    margin: 15px;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1;
+    color: #2f2f2f;
+  }
+  .pay-modal .author p {
+    font-size: 14px;
+  }
+  .pay {
+    padding: 0px 15px;
+    margin-top: 20px;
+  }
+  .pay .btn {
+    padding: 10px 0;
+    border: 1px solid #f69a48;
+    border-radius: 2px;
+    color: #f57e42;
+    font-size: 16px;
+  }
+  .btn-large { display: block }
+  .pay h5 {
+    margin: 15px 0 8px 0;
+    font-size: 12px;
+    font-weight: normal;
+    color: #b1b1b1;
+    text-align: left;
+  }
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-group .btn {
+    width: 31%;
+    vertical-align: bottom;
+  }
+  .btn-group span { font-size: 12px }
+
+  .custom-modal {
+    padding: 0 15px;
+    margin-bottom: 200px;
+  }
+  .custom-modal h3 {
+    margin: 25px 0 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+  }
+  .custom-modal label {
+    padding: 0 10px;
+    margin-bottom: 18px;
+    display: block;
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    color: #f69a48;
+    overflow: hidden;
+  }
+  .custom-modal input,
+  .custom-modal input:focus {
+    height: 44px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+  }
+  input::-webkit-input-placeholder {
+    color: #b1b1b1
+  }
+  .custom-modal .btn-large {
+    padding: 11px 0;
+    background-color: #f69a48;
+    border-radius: 2px;
+    color: #fff;
+    text-align: center;
+  }
+  /*作者信息*/
+  .author-info {
+    margin-top: 35px;
+    text-align: center;
+  }
+  .author-info span {
+    position: relative;
+    top: -10px;
+    padding: 0 10px;
+    display: inline-block;
+    background: #fff;
+    color: #b1b1b1;
+    font-size: 14px;
+    z-index: 1;
+  }
+  .author-info .avatar { margin-top: 14px }
+  .avatar img {
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+    border: none;
+  }
+  .author-info p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #444;
+  }
+  .author-info .name {
+    margin-top: 15px;
+    color: #2f2f2f;
+    font-size: 18px;
+  }
+  .author-info ul {
+    padding: 0;
+    margin-top: 15px;
+    list-style: none
+  }
+  .sns li { display: inline-block }
+  .sns img {
+    height: 20px;
+    padding: 0 3px;
+  }
+  /*热门文章*/
+  .hot-article{ text-align: center }
+  .hot-article span {
+    display: inline-block;
+    margin: 7px auto 17px;
+    color: #b1b1b1;
+    font-size: 14px;
+  }
+  .hot-article a {
+    display: block;
+    margin-bottom: 17px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  .hot-article .btn {
+    display: inline-block;
+    padding: 6px 22px;
+    margin: 30px auto 25px;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+    font-size: 14px;
+  }
+  .hot-article.author-info span { margin: 0 0 10px }
+  .open-app {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+    text-align: center;
+  }
+  .open-app a {
+    background: none;
+    color: #4094c7;
+  }
+  .open-app b {
+    margin: 0 15px;
+    color: #d9d9d9;
+  }
+  .backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #333;
+    opacity: .5;
+    z-index: 2;
+    display: none;
+  }
+  .help-modal {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background: #f4f4f4;
+    text-align: center;
+    z-index: 3;
+  }
+  .help-modal span {
+    color: #e58c7c;
+    font-size: 18px;
+  }
+  .weixin-browser-help { top: 10px }
+  .qq-browser-help,
+  .download-modal {
+    top: 50%;
+    margin-top: -60px;
+  }
+  .arrow {
+    position: absolute;
+    right: 12px;
+    top: -11px;
+    width: 92px;
+    height: 99px;
+    background: url(http://cdn0.jianshu.io/assets/wechat_img/arrow-a4f3eca5958ab6edbf8cbca4a8cfa4b1.png) no-repeat right 0;
+    background-size: 44px;
+  }
+  .help-title {
+    height: 45px;
+    padding-right: 47px;
+    text-align: right;
+  }
+  .help-title span {
+    position: relative;
+    top: 13px;
+    right: 10px;
+    font-size: 18px;
+  }
+  .modal-footer-banner {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    padding: 10px 24px 10px 10px;
+    border-radius: 0;
+    border-top: 1px solid #eee;
+    background: rgba(255, 255, 255, .95);
+    text-align: left;
+  }
+  .modal-footer-banner .avatar img {
+    width: 40px;
+    height: 40px;
+  }
+  .modal-footer-banner .close {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    text-align: center;
+  }
+  .close img { width: 9px }
+  .modal-footer-banner .avatar,
+  .modal-footer-banner div {
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .modal-footer-banner span {
+    position: relative;
+    top: -2px;
+    font-size: 15px;
+    vertical-align: middle;
+    color: #2f2f2f;
+  }
+  .modal-footer-banner span a {
+    padding: 0;
+    font-size: 15px;
+    color: #2f2f2f;
+    font-weight: bold;
+  }
+  .modal-footer-banner p {
+    margin: 0;
+    font-size: 11px;
+    color: #e56954;
+  }
+  .modal-footer-banner p b { font-weight: normal }
+  .help-modal a { display: inline-block }
+  .help-modal a span {
+    display: inline-block;
+    background: url(http://cdn0.jianshu.io/wechat_img/bg.png) no-repeat left bottom;
+    background-size: 93px;
+    text-align: left;
+  }
+  .weixin-browser-help p,
+  .qq-browser-help p,
+  .download-modal p {
+    margin: 10px auto 10px;
+    font-size: 16px;
+    color: #6B6F73;
+  }
+  .weixin-browser-help a,
+  .qq-browser-help a,
+  .download-modal a {
+    width: 40%;
+    height: auto;
+    margin: 10px 2px;
+    line-height: 35px;
+    background: #f4f4f4;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+  }
+  .help-modal .btn-mainRed {
+    background: #e78170;
+    border: 1px solid #e78170;
+    color: #fff;
+  }
+  .help-modal .btn-success {
+    position: relative;
+    top: 6px;
+    float: right;
+    width: 90px;
+    height: 29px;
+    line-height: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
+  .btn-success {
+    border-radius: 4px;
+    color: rgba(255,255,255,1) !important;
+    color: #fff;
+    background: #49BE38;
+  }
+  /*黑夜模式样式-------------------------------------*/
+  .reader-night-mode { background-color: #333 }
+  .reader-night-mode .title,
+  .reader-night-mode .content { color: #bbb }
+  .reader-night-mode .container a { color: #3dbcf5 !important }
+  /* 文章信息*/
+  .reader-night-mode .article-info { color: #999 }
+  .reader-night-mode hr { border-color: #262626 !important }
+  .reader-night-mode .btn { background-color: #3f3f3f }
+  .reader-night-mode .download .btn-success { color: #fff !important }
+  .reader-night-mode .container .content img {
+    border-color: #262626;
+    opacity: .9;
+  }
+  .reader-night-mode .image-package .image-caption,
+  .reader-night-mode .video-package .video-description,
+  .reader-night-mode .video-package .video-placeholder-area { border-color: #262626 }
+  /*文章内*/
+  .reader-night-mode .content blockquote,
+  .reader-night-mode .content table,
+  .reader-night-mode .content table th,
+  .reader-night-mode .content table td {
+    background-color: #555;
+    border-color: #262626
+  }
+  .reader-night-mode .content pre,
+  .reader-night-mode .content code {
+    background-color: #262626;
+    color: #78cc78;
+  }
+
+  .reader-night-mode .support-author .btn-pay { color: #fff !important }
+  .reader-night-mode .pay-modal h3,
+  .reader-night-mode .custom-modal h3 { color: #eee }
+  .reader-night-mode .custom-modal label {
+    background-color: #3F3F3F;
+    border: 1px solid #2F2F2f;
+  }
+  .reader-night-mode .custom-modal input { color: #eee }
+
+  .reader-night-mode .share a { background-color: #222 }
+  .reader-night-mode .top-title {
+    background-color: #222;
+    color: #eee;
+  }
+  .reader-night-mode .comment,
+  .reader-night-mode .child-comments,
+  .reader-night-mode .child-comment { border-color: #262626 }
+  .reader-night-mode .comments p { color: #999 }
+  .reader-night-mode .author-info { border-color: #999 }
+  .reader-night-mode .author-info span { background-color: #333 }
+  .reader-night-mode .author-info .avatar img { border: 2px solid #ddd }
+  .reader-night-mode .author-info .name,
+  .reader-night-mode .author-info p { color: #bbb }
+  .reader-night-mode .footer { border-color: #2f2f2f }
+  .reader-night-mode .footer span,
+  .reader-night-mode .footer p { color: #999 }
+  .reader-night-mode .footer b { color: #f49484 }
+  .reader-night-mode .open-app b { color: #222 }
+  /* Responsive css
+  For phone and tablet devices
+  -------------------------------------------------------------*/
+  @media (max-width: 480px){
+    .help-modal a { font-size: 13px }
+    /* 内容部分*/
+    .content {
+      position: relative;
+      font-size: 16px;
+    }
+    /*作者信息*/
+    .author-info span { font-size: 12px }
+    .author-info p {
+      margin-bottom: 16px;
+      font-size: 12px;
+    }
+    /*热门文章*/
+    .hot-article span { font-size: 12px }
+    .hot-article a { font-size: 16px }
+    .hot-article .btn { font-size: 12px }
+  }
+  @media (min-width: 481px) and (max-width: 768px){
+    .content img { width: auto }
+  }
+  /*iphone6 plus*/
+  @media (max-width: 414px){
+    .modal-footer-banner .btn-success { width: 90px }
+  }
+  /*iphone6*/
+  @media (max-width: 375px){
+    .help-modal a { padding: 0 3px }
+    .modal-footer-banner p b { display: none }
+  }
+  /*iphone5、4、3*/
+  @media (max-width: 320px) {
+    .help-title {
+      padding-right: 47px;
+    }
+    .help-title span {
+      font-size: 16px;
+      right: auto;
+    }
+    .help-modal .btn-success { width: 70px }
+  }
+</style>
+
+  <!-- Baidu stats -->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</head>
+<body class="wechat-web reader-day-mode reader-font2 ">
+
+  <div class="container">
+    <div class="top">
+<!--       <a href="/apps">
+        <img src="http://cdn0.jianshu.io/assets/wechat_img/logo-3f157101ff0c5201a0dda8e346213a92.png" alt="Logo" />
+</a>      <img class="app-android goto-app-button" src="http://cdn0.jianshu.io/assets/goto-app-21f64514501f653c0332310723f62704.png" alt="Goto app" /> -->
+    </div>
+    <h1 class="title">
+      粉色信笺
+    </h1>
+    <div class="article-info">
+      <a href="#">少年·Sure</a>
+      <span>2016-01-07 04:45</span>
+    </div>
+    <div class="content">
+      <p>       在苏格兰某部的群岛中，有一座美丽的岛屿，名曰“斯凯岛”。那是修十几年来从未离开过的土地，而如今，终究也要离开了。</p><p>       关于岛名的由来，甚至连当地德高望重的老人也说法不一：有人说，Isle of skye，理应叫做天空岛；亦有人称，苏格兰盖尔语中是skitis，即翅膀，描绘出岛的形状更为贴切...记忆里所听到的众多版本中，当属修对其别名的译述最令人满意：Eilean a' Cheò，意为“迷雾中的岛屿”。</p><p>      修站在码头，眼睛凝视远方，右手托腮，左手抚着围栏。他看得入神，透过迷雾弥漫的海面向更远处眺望。朦胧里，那儿似乎出现了一簇柔弱的绿光，依稀隐约着微亮。他抬起左手，试图伸手触碰，愈近愈弱的绿光一如即将破碎的梦。修倒吸了一口凉气，迅速收回了伸出的左手。而远处的绿光，直到方才呼出的热气消散，才恢复了原有的光亮...</p><p>       “嘿，伙计~该开船了！”同伴拍了拍修的肩膀，打断了之前的思绪。他随同伴上了船，偶尔回眸，以搜寻刚才的绿光。</p><p>      不久，船开了。船上有位子的坐在自己的位子上，没有位子的坐在他人的位子上，各忙各的。走廊里、洗手间里、垃圾桶旁，大抵所能想到的角落都是人，一如东方的春运。修提着行李，紧随同伴，一路“借过，谢谢~”，从船头一直讲到靠近船尾。终于在倒数第二排007号位子坐下，同伴紧随其右，亦是汗如雨下。</p><p>      “啤酒可乐白兰地，牛奶咖啡威士忌...脚让一下，谢谢~”只见随着走廊前排乘客身体的依次扭曲，一辆手推式售卖车如一叶不系之舟乘风破浪而来。接着，一位金发碧眼的乘务员紧随其后。她冲着旁边的同伴眨了眨眼，笑靥如花，示意其要不要买。同伴扭头转向窗外，装作看远处的海景。于是，上一刻的笑容消失，转向下一排乘客，重复、再重复...</p><p>       同伴终于可以转过头来，从背包中拿出一本厚厚的书。只见封面上依次排列着一颗星、一扇门、一个人，单调却错落有致。修定睛看了下书名，赫然用中文写着“三体”。与刚才的尴尬相反，寒悠闲地阅读起来。</p><p>      寒，修的同伴。他与修是同学，从小学到高中都是；亦是邻居，从出生至昨天都是。拥有双重人格，对人忽冷忽热，对其他人冷，唯独修除外。痴迷物理，对一切理论物理学充满兴趣，致力于成为像爱因斯坦一样伟大的物理学家。初中时，曾在物理教科书封面写道：“Physics is sexy !”此次与修一起去Z郡读大学，寒勤勉进取，加之已获国际物理竞赛金奖，被保送至A校。</p><p>      修，小学、初中常年稳居年级前三，会长、部长、理事曾挂名于一身，中学以全校第一的名次录取于本镇最好的高中。按正常水平，录取的大学理应不在寒之下，令人匪夷所思的是，竟连本郡的B校也未考中，委身去了Z郡的C校。大家都清楚，这种事不论换作谁，内心多少都会有些不甘，更别说这个人是修。</p><p>      这是他们第一次离开这座岛屿，驶往一座距斯凯岛1993英里的陌生城市。多亏开船前修看到的那簇绿光，让他再次有了新的希望。它似乎在预示着：那飘渺的梦，就在离海岸不远的地方。他失落却憧憬着，不舍却期待着。此刻的海面，人船静止，唯有水在流逝...</p><p>      “嘿~我想到一个问题”，寒兴突然拍着我的肩膀，“把一只蚊子放入重为200g的密闭玻璃容器里，与不放蚊子两种情况，分别在天平上的示数有没有不同”。兴奋如潜行者于残血完成刺杀，划破了黑夜的宁静。果然，这个问题也成功地引起了修的兴趣。也许所谓“物以类聚，人以群分”的道理，大抵如是。他们认真地假设着、激烈地争辩着、耐心地倾听着，最后微笑地点头着...</p><p>      不知过了多久，修和寒与其他乘客一样，终也败给了睡眠。如果说人有万种，那么对每一种人，都会有一种睡姿与之对应。更有打鼾声、梦呓声与小孩哭声，构成一首杂乱无章的交响曲。幸好，熟睡的人儿不会“为之所动”。</p><p>      镇子上的巨型水车飞快旋转，修仿佛坠入了时空裂缝，隐约感觉到了一个非常熟悉的地方。那里的天是蓝的，树是绿的，水是清的，连泥土也是清香的。是的，画面渐渐让回忆变得清晰：这里，正是他生活了十几年的小镇啊。不知怎的已然到了门口，修探着脑袋小心地往屋里观望。一个女人正在厨房做饭，皮肤白皙，浑身散发着迷人的香气。看到修放学回来，朝他的额头给了一个温柔的吻。</p><p>      她是他的姑姑，修从小在姑姑家长大，不知哪天，突然改口叫了妈妈。毕竟对他来说，她的爱甚至比自己的亲生父母加起来还要多得多，即便假设他的父母都还活着。家里的白糖用完了，妈妈给了他50便士，嘱咐他过马路注意安全，然后速去速回。修总感觉哪里不对劲，但怎么也想不起问题出在哪里。</p><p>      修兴奋得连书包都忘了脱，手攥着零钱，飞快地跑出了门。边哼着歌，边欢快地走在车水马龙的路上。他走到十字路口，等待红绿灯，穿过马路右转直走。边走边想：依照惯例，剩下的零钱可以存在哆啦A梦储蓄罐里。足够买好多零食，一周可能都吃不完呢。他想象着，期待着，眼睛放着光亮。修咽了咽口水，脚步轻快，转眼就快到便利店门口。</p><p>      说时迟，那时快，可怜的修脚底一滑，一下子扑倒在了便利店门口。一如某个虔诚的佛教信徒，做“五体投地”状。年迈的店主老鲍勃爷爷，步履蹒跚地走到这个目瞪口呆的孩子身边。扶起他，拍干净了他身上的尘土，和蔼地问他有没有受伤。修摇了摇头，像一个犯了错的孩子。爷爷抚摸着他的头，同情地问：“要买什么东西吗，我可怜的孩子？”修伸出紧攥着钱的小手，刚准备递给爷爷，忽然又收了回来。爷爷问他有什么问题吗，他竟然一下子哭了起来。老鲍勃越是问，他越是哭得大声。没办法，爷爷转身从柜台上拿了一颗巧克力，放在了他的手里。他的哭声渐渐弱了，最后停了下来。委屈着小声说，“刚摔了一跤，我一下子忘记妈妈让我买食盐还是白糖了...”“哦—我可怜的孩子”老鲍勃笑了，“爷爷可以把两样东西都卖给你”。修问了问各自的价格:食盐24便士、白糖28便士，心想50便士不足以同事买食盐和白糖。老鲍勃看出了他的疑虑，告诉他可以把东西以50便士卖给他。修高兴了起来，心想虽然没了零花钱，终究还是能完成妈妈的任务。于是谢过了鲍勃爷爷，拿着两样东西，迅速又小心地奔回了家。</p><p>       修推开家门，把东西放在客厅的桌上，空手走到厨房门口，眼睛一眨一眨地注视着妈妈。</p><p>       “没有买到白糖吗，宝贝儿”，妈妈下意识地问。</p><p>       “当然...当然...买到了”，修小手冒汗，支吾着答。<br></p><p>       “那赶快拿出来吧，我这会儿要用”，妈妈接着讲。</p><p>       “好的...等我一下...”，说完转身快速客厅跑去。</p><p>       妈妈顺着他的身影，看到了客厅的桌上白糖旁边，多了一袋食盐，于是问起修它的由来。修本想不将这件事告诉妈妈，趁她离开的时候把食盐偷偷地放进厨房。不料被识破，只好说出了事情的原委。妈妈听后，摸了摸修的头，略带生气却又心疼地说：“以后不管发生什么，都别瞒着妈妈，好吗？”修认真地点了点头，目光从未有过的坚定。妈妈看着他，他又看了看妈妈，两人忽然笑了起来，灿烂如霞。</p><p>      很快，修已经吃好了午餐，背起书包给妈妈说了再见。妈妈叫住了他，又给了修50便士，嘱咐他要记得把上午的钱还给便利店老板，余下的作为零花钱。修点头说好，高兴地离开了家。</p><p>      门外阳光刺眼，修走在去便利店的路上，依旧是那么熟练。再次走到十字路口，等待红绿灯，穿过马路右转直走。很快，便到了那里。他确定自己没有走错，可奇怪的是上午的便利店招牌不见了，取而代之的是一家冰淇淋店。店员同样穿着短袖，一如此刻的修。修的脑袋像是受到了短暂的冲击，想起了今天有太多困惑的地方。比如，自己为什么老感觉困，路上的行人出奇的少，周围的一切如此熟悉却总有些晃眼。正在他思考这些问题的时候，忽然感觉自己的腿像被什么黏黏的东西碰了一下，准确的来说，是舔。他低下头，看到一只70cm左右的狼狗，体壮色灰，神气十足。“嗨~布莱克”，修放下之前的疑惑，“你怎么跟来啦”。</p><p>      布莱克，修从小养到大的爱犬，更准确的说是玩伴。因幼犬时毛发为黑色，被修的妈妈起名为“布莱克”，长为成犬后，毛色由黑变灰，名字仍然延续之。修在爸爸农场帮忙的时候，布莱克常跟着他从农场的一头跑到另一头，渴了就在农场吃野草，累了就舔修的腿示意停下一起休息。这次，想必是陪修一起去学校的。</p><p>      修不太好意思带着布莱克去学校：一是会被同学视为另类，二是校园的守卫也不可能让布莱克进去。只好蹲下来，抱了抱布莱克，然后指了指回家的路，示意布莱克听话回去。从布莱克的眼神里，看得出有些失落。修看在眼里，可最终还是没有改变之前的决定。他把布莱克带回了马路对面，好让它自己回家。他闭着眼睛，始终没再回头。</p><p>      过了好久，修才敢睁开眼，试探着回头看，一次、两次、三次...终于看清啦，确定没有布莱克的踪影，于是放心地走去学校。</p><p>      门口的石碑上，安静地伏着“斯凯中学”几个单词。他的记忆一下子回到了高中，身体也似乎变到了高中生的模样。是的，修的学校到了。</p><p>      “嗨！修~”，寒拍了拍修的肩膀，“怎么还不进去呢，要迟到啦”。</p><p>      修跟着寒，一路寡言，很快到了教室。寒率先找到了空位，修次之，坐其右。上课铃响起，台上数学教授海森堡慷慨激昂，相反，台下却出奇的寂静。修环顾四周，竟然发现全是初中的同学，这再次引起了修的困惑。旁边的寒认真地推导着他新发现的物理学理论，后排偶有纸条传过，其中有一张传修到这里，停下了。他回头瞧了瞧，始终无法察觉是谁传过来的。心想：也罢，打开看看就知道啦。</p><p>       “寒同学，可回答下这个问题吗”，还没来及打开纸条，教授突然让寒来回答问题。旁边的修表面平静，内心其实已经风起云涌。他用了2秒，恢复了往日的镇定，食指扶了扶眼镜，看清了教授出示的题目：塑料袋里有6个苹果，在不切开苹果的情况下，如何将其均分给三个孩子，而袋子里恰余2个苹果？</p><p>      寒从位子上站了起来，抬头看了看题目，又低头看了看修，沉默着...修低下头，小声地给同伴暗示着答案，不巧的是声音太小，寒最终也没能听见。没办法，修只好提高了嗓门，谁知过了火候，竟被海森堡也听到了。</p><p>     “看来修同学想回答这个问题，那么你来把答案告诉大家吧”，海森堡顺势说道。</p><p>     修看起来有些不太情愿，但又想不出更好的理由拒绝，只好站了起来：“这道题从常规的思路讲，可以假设每个人分得x个苹果，即：'3x+2=6',解得'x=4/3',又由题意知：x为整数，显然不符合题意；所以理应发散性思维，抛开之前的方程，把6个苹果与袋子依次整齐地排列在桌子上，分发者拿起最右边的袋子往左移动2个苹果距离，此题得解。”</p><p>      “答得不错嘛，不过下次要记着“，海森堡示意修和寒坐下并对其他同学说，”如果知道答案就站起来回答，不要在底下窃窃私语”。</p><p>      寒和修对这种话从来都不会听进耳朵，一个接着上一行的推导，一个继续埋头写着小说...</p><p>      不知过了多久，修带来的稿纸皆已用尽。他伸了个懒腰，钢笔帽却不小心掉到了身后。他转过身去环顾四周，看到珍坐在他的身后冲他微笑，这可让修吓了一跳。</p><p>      珍，修的中学同学，NO.2学霸校花，曾在英语朗诵比赛中闻名于校。时常对差等生冷眼以对，对优等生则笑脸相迎。对于这种人，修向来都是敬而远之的。所以至今，修未和珍讲过一句话。而刚刚那一丝诡魅的笑，让修不禁打了个寒颤。他忽然意识到之前那张纸条，会不会与珍有关。</p><p>      修小心翼翼地摊开了纸条，又突然合上了，翻开教科书，夹在了里面。“你哪里不舒服吗，修”，寒问道。“不...不...我很好...”，修回答着，神色多少有些不自然。</p><p>      就在这时，放学铃响了。修麻利地收拾好书包，跟着寒一起离开了教室，没再回头。刚走出校门，寒就开始与修交谈起来。</p><p>      “那个...苹果那个问题要谢谢你，帮我圆了场。”</p><p>      “其实也怪我，声音太小，没有给你讲清楚，如果写下来，就不会出现课堂的尴尬。”</p><p>      “我当时只想到了物理思维，没有考虑实际上，发给小孩的苹果依然可以装在袋子里。”</p><p>      “那只不过是个小聪明罢了，话说你所学到的大智慧，远比我的小聪明要有用的多呢！”</p><p>      “咳咳...说吧，那张纸条是怎么回事，那会儿看把你紧张的。”</p><p>      “喏~纸条在这里，你自己看吧。”</p><p>      寒接过纸条，上边只写着一句话：</p><p>                        Would you like to be my boy friend？</p><p>                                                                —— Jane</p><p>      "真没想到竟然是她"，寒折起纸条还给修，“你是怎么想的”。</p><p>      “你说呢”，修双手插入口袋，“我想你应该猜得到”。</p><p>      “很明显她不符合你的风格”，寒边走边分析着，“所以又要我帮你拒绝咯”。</p><p>       “聪明~”，修一时轻松了许多，“果然知修莫若寒”。</p><p>       “可毕竟每个女孩心里都住着一位天使，在爱情面前，每个人都不曾卑微。”</p><p>       “啊哈~不错嘛，寒的情商何时高的我都快不认识了，不过这个观点我倒是十分地认同。”</p><p>       “都是书上看来的。最近学着修读了几本文学书，开窍了不少。”</p><p>       “嗯，道理明白的早晚不要紧，透彻就好，一知半解最为可怕。”</p><p>       “说真的，你这次总不会还像以前那样避而不见吧，想个借口回应下也好啊。”</p><p>       “那就帮我告诉她，我已经有女朋友了，这样总该可以了吧...”</p><p>       “女朋友？叫什么名字？她又不傻，又怎会轻易死心。”</p><p>       “芬！”</p><p>       修随口说出这个名字，干脆利落，目光却是无比的诚恳。寒愣了下，然后拍拍修的肩膀，笑了。如若不是朝夕相处的同伴，换做任何人，都有可能信了。</p><p>       就这样，不知不觉地已经到了家门前。二人互相道了别，彼此说了再见。</p><p>       修回到家，把书包放在沙发。“吱“的一声，卧室的门开了。屋里的人，依旧是皮肤白皙，头发散发着迷人的香气。与之前略微不同,美丽的发际夹杂了几丝扎眼的银发。她背靠着床，一手托腮，一手拿着书。从封面来看，像是东方某国的文学名著。</p><p>       “嗨~宝贝儿”，看到修回来，起身合上了书本，“你什么时候回来的”。</p><p>       “刚刚放学，妈妈”，修想起了他的爱犬，“你有没有看见布莱克”。</p><p>       “哦~我的傻孩子”，妈妈用诧讶的深情看着修，眼角有些细纹，“你一定是在开玩笑”。</p><p>       “可我是认真的”，修完全没有搞清楚状况，继续说道，“下午布莱克要送我上学，我没让它跟来。”</p><p>       “宝贝儿，我想你一定是生病了。你难道忘记了在小学三年级的时候，镇上发生过一次抢劫，一名来自美国的劫犯持枪与附近的警察交火。那时你还在附近玩耍，混战中，一颗流弹的碎片飞了过来。你惊呆了，甚至忘记了闪躲。千钧一发之际，勇敢的布莱克飞扑过来，倒在了你的怀里。那时的你刚满十岁，布莱克也是。”</p><p>      修的记忆再次受到冲击：是啊，十岁的他抱着奄奄一息的布莱克，到处沾染着鲜血。他声音哽咽，拼命地记忆着周围的样子，眼睛充满了仇恨；它没再出声，疲惫的眼帘缓缓垂下，静静地睡着了。这一次，修没有下雨，抱着沉睡的布莱克回了家。他没让别人帮忙，在自家的后院，用铁锹挖了一个方方正正的坑。里面躺着布莱克，还有，每晚陪自己睡觉的泰迪熊。</p><p>      修始终相信：早晚有一天，自己的布莱克会化身天使，微笑着，入了他的梦...</p><p>      梦？！对啊，这定是一场梦！修忽然意识到，这短短的半天经历中有太多的不合理：眼角出现皱纹的妈妈、神秘消失的便利店、转眼长大的修、出现在高中课堂的初中同学、教授着小学数学的海森堡等等...然而最为怪异的，还是送自己上学的布莱克。</p><p>      修有些清醒，没再待在这儿，顺着盘旋木梯跑到了房子的楼顶。随后纵身一跃，跳了下去。</p><p>      “啊。”修险些叫出了声，他眼睛红肿，似乎一夜未眠。寒依旧看着书，仍是那本“三体”，看到修醒了，放下了手中的书。</p><p>      “你还好吧，刚刚做梦了么？”</p><p>      “嗯，奇怪的梦，剧情漏洞百出，而我最后才得以识破。”</p><p>      “我看过一本关于梦的书，上面讲到：‘梦是平行时空之间的每个你，通过时空裂缝交换记忆。所以偶尔会预知未来，看到似乎以前经历过的东西。但受所处磁场的干扰，记忆会变得模糊，偶尔遇到特定事件刺激，又会瞬间恢复。于是就会出现，某一瞬的某个场景，如同早已经历过一般。感觉异常真实，却怎么也想不起何时经历。’”</p><p>      “也许真实只是相对。人们大多以为活着才算真实，说不定死后的世界，比所谓的真实更加真实。而这真实的一切，不过是梦通过层层嵌套，给人的错觉罢了。”</p><p>      “是呀，梦真是个迷一样的东西，每个人都有自己的理解，却没有人能够准确解释它的真正奥义。”</p><p>      “嗯，每个人都知道梦不真实，可人们偏偏愿意继续做下去。唯一的解释是，那儿有他们在乎的东西。”</p><p>      寒有双重人格，而修则比他还要多的多。时而能说会道，时而又木讷语塞。可每一个，都是实实在在的修。这好比基因的全能性，遇到不同的人或物，便选择性表达出迥异的性格。</p><p>      沿途海面拼命后退着，修、寒走上甲板，前者诵着诗，后者和着歌。</p><p>      不久，海天交界处出现了一抹微红，接着变大变浓，终于把周围的海水染成了一缸葡萄酒。一缕阳光洒在他们脸上，二人平躺在甲板，看着太阳从脚底一直滑到后方。</p><p>       船停了，Z郡到了，这一刻，终究还是来了。一个深深的拥抱后，二人便各自分道扬镳。没有煽情的桥段，不要长长的对白，只是相视一笑，然后淡然地离开。</p><p>      寒去了A校，主修物理学。刚开学就在学校崭露头角，而这，也引起了波尔教授的注意。主动邀请寒和自己一起研究物理，主攻量子力学。</p><p>      修去了C校，主修计算机。加入过几个社团，改名为舒，无课便泡图书馆，偶尔写信给寒。</p><p>      转眼，已过几个寒暑。寒深得波尔教授真传，已发表多篇学术论文，都是有关量子力学；舒始终对计算机打不起兴趣，索性转了专业，拥抱了英国文学。二人虽在同郡，但平时各忙各的，偶尔信件交流，介绍各自的生活。</p><p>       转专业的第一天，他遇见了一个女孩：拥有着美丽的编发，伴着淡蓝色的小花，宛如花园的公主，唯美而优雅。舒位其后，目光没再移动，像是位旅者，看到了最美的风景。女孩忽然转身，捡起一枚散落的花瓣，也就是在那一秒，他邂逅了她的容颜。</p><p>       许多念念不忘，只是一瞬；许多一瞬，却是念念不忘。</p><p>       从那儿以后，舒开始有了喜怒哀乐，像是有了一条无形的绳索，绑定了他与她的生活。是啊，喜欢一个人，就会自然而然地从各个方面表现出来，有如夜空中的明星，无所遁形。</p><p>      他去了她最常去的餐厅，点了她最爱吃的菜单，嘴巴一边品尝，心里一边称赞。</p><p>      “嗨~你是文学二班的舒吧？我是芬。”</p><p>      “没...没错...是我。很高兴认识你~”</p><p>      “我也是~我看过你写的几首诗歌，感觉还蛮特别。”</p><p>      “真的吗？谢谢你的赞赏！”</p><p>      “好巧，你也来这家吃牛排，这个我几乎每次来都会点。”</p><p>      “一位朋友介绍我的，第一次在这家吃，不过真心很棒。”</p><p>      “这样啊，你那位朋友没有一起来吗？”</p><p>      “啊？！没有...她今天有事，没能一起过来。”</p><p>      “好吧。我也一个人，你介意我和你一张桌吗？”</p><p>      “当然不介意！”</p><p>      和舒一样，芬也叫了一份的牛排。他们边吃边交谈着，很快便熟络起来。餐毕，舒忽然想邀请芬去看话剧，芬点了点头，没有拒绝。</p><p>       话剧的名字叫根本哈根，剧情大概是：德国纳粹时代的科学家H和丹麦科学家E及其夫人M的亡后灵魂的回忆与对话，引出了现代科学史上著名的“哥本哈根会见之谜”。“哥本哈根会见”被三个幽灵演绎了4次，每一次都提出不同的可能性。他们不断地重回那天傍晚，面对当年的困惑，结果却总是陷于迷雾，直到最后也没找到答案。</p><p>       舒看得津津有味，几乎完全沉浸在当时的故事背景中；芬倒觉得并没那么有趣，坐在旁边偶尔打着哈欠。话剧终于结束了，剧院的人们纷纷离场。舒发现身边的芬，此刻睡的正香。舒有点不忍心叫醒她，但是没有办法，拍了拍芬的肩膀，一路送回了宿舍。两人道了别，说了晚安。</p><p>      回去的路上，舒认真地反思着：如果爱一个人，就应该给其·她·真正喜欢的东西，而不是自己。是的，他打心底默默地记着。</p><p>      平安夜前夕，是芬的生日。舒跑遍了附近的几条街，终于买到了那本《呼啸山庄》。之后差认识的同学，送到了她的宿舍。芬看到那本书，开心极了，她把自己的心情告诉了舒，于是他比她更加快乐。</p><p>       有一天，舒问芬：如果毕业了会有什么打算。</p><p>       “等大学毕业了，芬有什么计划吗？”</p><p>       “有啊，不过我还没想好，等想好了再告诉你吧。你呢？”</p><p>       “23岁开始工作，45岁退休，其余的时光，就陪她去她想去的地方，然后恋爱一辈子。为她写诗，为她歌唱，写一本小说并请她做女主角，和自己演一场永不杀青的电影。”</p><p>       “wow~那她一定很幸福”，芬忍不住惊叹，表情充满着羡慕。</p><p>       “我也是这么觉得”，舒深情地望着芬，腼腆的笑了。</p><p>       就在这一刻，舒发现自己已经爱上了这个女孩。她的一颦一笑，早已融化了自己曾经冰冷的心。</p><p>       他想到了表白，可表不表白，又有什么区别呢？若她在乎，便不会拒绝；若她反感，亦不会接受。可他是真的爱她，也想起了布莱克，他不想自己在乎的被别人再次抢走。最终，他还是决定了表白。</p><p>       “嘿，芬~我给你讲件事情，你会不会生气？”</p><p>       “不，你先说，我再判断生不生气。”</p><p>       “啊？...我...想请你做我小说的女主角...”</p><p>       “这个啊，当然没问题。”</p><p>       “还有...和我演一场永不杀青的电影！”</p><p>       “所以，这算是表白吗？”</p><p>       “你说算那就算吧~”</p><p>       “口才真烂，都不及你文采的一半~”</p><p>       “当然啦，因为我在表白的时候没想什么该死的文采，只想着你啊！”</p><p>       终于，我停下了笔，理了理案台上的手稿，递给了还在阅读这篇小说的女主角。</p>
+    </div>
+<!--     <div class="download">
+      查看全部评论，参与文章讨论
+      <a class="btn btn-success" href="/apps/download">
+        <img src="http://cdn0.jianshu.io/assets/wechat_img/phone-81ee3331d730895f38e8f888605f1bfb.png" alt="Phone" />立刻下载 简书客户端
+</a>    </div> -->
+    <div class="author-info">
+      <div class="top-title">作者信息</div>
+      <!-- <a href="/users/a033a3b8ae90"> -->
+        <div class="avatar">
+          <img thumbnail="128x128" src="http://qzapp.qlogo.cn/qzapp/100410602/F5FB0A988D0AF18B3A922E78EBEE96A2/100" alt="100" />
+        </div>
+        <p class="name">少年·Sure</p>
+<!-- </a>  -->     <p>喜欢一个人，就会在各个方面表现出来，如夜空中的明星，无所遁形。</p>
+    <h3 style="text-align:center;font-size:14px;font-weight:normal;color:#e78170;line-height:42px;margin:0;">Copyright©2016 Lovingly  Created  by  Sure .</h3>
+    </div>
+
+  <div class="backdrop"></div>
+  <div class="help-modal qq-browser-help hide">
+    <p>当前浏览器无法正常跳转，请用其他浏览器访问本页面再次尝试~</p>
+    <a href="javascript:void(null)" class="btn-mainRed">我知道了</a>
+  </div>
+  <script type='application/json' data-name='note'>
+    {"title":"粉色信笺","slug":"142d5284b4e9","share_image_url":"http://qzapp.qlogo.cn/qzapp/100410602/F5FB0A988D0AF18B3A922E78EBEE96A2/100","public_abbr":"   在苏格兰某部的群岛中，有一座美丽的岛屿，名曰“斯凯岛”。那是修十几年来从未离开过的土地，而如今，终究也要离开了。   关于岛名的由来，甚至连当地德高望重的老人也说法不一：有人说，Isleofskye，理应叫做天空岛；亦有人称，苏格兰盖尔语中是skitis，即翅膀，描绘出岛的形状更为贴切...记忆里所听到的众多版本中，当属修对其别名的译述最令人满意：Eileana'Cheò，意为“迷雾中的岛屿”。   修站在码头，眼睛凝视远方，右手托腮，左手抚着围栏。他看得入神，透过迷雾弥漫的海面向更远处眺望。朦胧里，那儿似乎出现了一簇柔弱的绿光，依稀隐约着微亮。他抬起左手..."}
+  </script>
+
+  <script src="http://cdn0.jianshu.io/assets/wechat-9bc26d8afa100535470915fc3674571d.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35169517-1']);
+  _gaq.push(['_setCustomVar', 2, 'User Type', 'Member', 1 ]);
+  _gaq.push(['_trackPageview']);
+
+  
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!-- script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script -->
+
+  <script type='text/javascript'>
+    var Maleskine = {
+      readScrollLimit: $('div.author-info').offset().top,
+
+      startReadingTime: new Date().getTime(),
+
+      parametersReg: /([^&=]+)=?([^&]*)/g,
+
+      showShareHelp: function() {
+        $('.share-help').css('display', 'block');
+        $('.backdrop').css('display', 'block');
+      },
+
+      hideShareHelp: function() {
+        $('.share-help').css('display', 'none');
+        $('.backdrop').css('display', 'none');
+      },
+
+      showQQHelp: function() {
+        $('.qq-browser-help').css('display', 'block');
+        $('.backdrop').css('display', 'block');
+      },
+
+      hideQQHelp: function() {
+        $('.qq-browser-help').css('display', 'none');
+        $('.backdrop').css('display', 'none');
+      },
+
+      showWeixinHelp: function() {
+        $('.weixin-browser-help').css('display', 'block');
+        $('.backdrop').css('display', 'block');
+      },
+
+      hideWeixinHelp: function() {
+        $('.weixin-browser-help').css('display', 'none');
+        $('.backdrop').css('display', 'none');
+      },
+
+      showDownloadHelp: function() {
+        $('.download-modal').css('display', 'block');
+        $('.backdrop').css('display', 'block');
+      },
+
+      hideDownloadHelp: function() {
+        $('.download-modal').css('display', 'none');
+        $('.backdrop').css('display', 'none');
+      },
+
+      removeFooterBanner: function() {
+        $(".modal-footer-banner").remove();
+      },
+
+      changeimg: function() {
+        if ($(".wechat-web").hasClass("reader-night-mode")){
+          $("#appimg img").attr("src","http://cdn0.jianshu.io/assets/wechat_img/bfooter-pad-83443420a044af24b9922e26a58c1d1f.png");
+        }
+      },
+
+      gotoDownload: function() {
+        var ua = navigator.userAgent.toLowerCase();
+
+        if (/android/.test(ua)) {
+          if (ua.match(/micromessenger|qq|mqqbrowser/)) {
+            // We are inside tencent products, go directly to Yingyongbao
+            window.location = "http://a.app.qq.com/o/simple.jsp?pkgname=com.jianshu.haruki";
+          } else {
+            window.location = "http://downloads.jianshu.io/apps/haruki/JianShu-1.9.7.apk";
+          }
+        }
+
+        if (/iphone|ipad|ipod/.test(ua)) {
+          // in iOS
+          if (ua.match(/micromessenger|qq|mqqbrowser/)) {
+            // inside Weixin
+            window.location = "http://a.app.qq.com/o/simple.jsp?pkgname=com.jianshu.haruki";
+          } else {
+            // Go to AppStore
+            window.location = "https://itunes.apple.com/cn/app/jian-shu/id888237539?ls=1&amp;mt=8";
+          }
+        }
+      },
+
+      gotoApp: function() {
+        var ua = navigator.userAgent.toLowerCase();
+
+        if (/android/.test(ua)) {
+          // This is android
+          var versionMatch = ua.match(/chrome\/(\d+)/)
+
+          if (ua.match(/MicroMessenger/i) || ua.match(/weibo/i)){
+            Maleskine.showWeixinHelp();
+          }
+          else if (ua.match(/MQQBrowser/i) || ua.match(/QQ/i)) {
+            Maleskine.showQQHelp();
+          }
+          else if (25 <= (versionMatch && versionMatch[1])) {
+            // Browser is Chrome, version equal to and greater than 25
+            // Set intent
+            window.location = "intent://notes/" + Maleskine.note.slug + "/#Intent;scheme=jianshu;package=com.jianshu.haruki;end"
+          } else {
+            var iframe = document.createElement('iframe');
+            iframe.hidden = true;
+            iframe.src = "jianshu://notes/" + Maleskine.note.slug;
+            document.body.appendChild(iframe);
+
+            var startTime = new Date();
+            window.setTimeout(function() {
+              600 > new Date() - startTime && (Maleskine.showDownloadHelp())
+            }, 400)
+          }
+        }
+
+        if (/iphone|ipad|ipod/.test(ua)) {
+          // in iOS
+          if (ua.match(/MicroMessenger/i) || ua.match(/weibo/i)){
+            Maleskine.showWeixinHelp();
+          }
+          else if (ua.match(/MQQBrowser/i) || ua.match(/QQ/i)) {
+            Maleskine.showQQHelp();
+          } else {
+            window.location = "jianshu://p/" + Maleskine.note.slug;
+            window.setTimeout(function() {
+              window.location = "https://itunes.apple.com/cn/app/jian-shu/id888237539?ls=1&amp;mt=8";
+            }, 400);
+          }
+        }
+      },
+
+      markRead: function() {
+        Maleskine.visitData["reading_time"] = Math.floor((new Date().getTime() - Maleskine.startReadingTime) / 1000);
+
+        $.post("/notes/" + Maleskine.note.slug + "/mark_read", Maleskine.visitData);
+      }
+    };
+
+    $('div.backdrop').on('tap', function(){
+      Maleskine.hideWeixinHelp();
+      Maleskine.hideQQHelp();
+      Maleskine.hideDownloadHelp();
+      $('div.backdrop').hide();
+    });
+
+    $(document).ready(function(){
+      $('.modal-footer-banner').show();
+
+      // Get note info
+      Maleskine.note = JSON.parse($('script[data-name=note]').text());
+      Maleskine.note.url = window.location;
+
+      // Setup weixin
+      if (Maleskine.initWeixin != null){
+        Maleskine.initWeixin();
+      }
+
+      // $(window).scroll(function() {
+      //   var scrollBottom = $(window).scrollTop() + $(window).height();
+      //   if (scrollBottom >= $('.footer')[0].offsetTop) {
+      //     if ($('.modal-footer-banner').css('display') != 'none') {
+      //       $('.modal-footer-banner').fadeOut('fast');
+      //     }
+      //   } else {
+      //     if ($('.modal-footer-banner').css('display') == 'none') {
+      //       $('.modal-footer-banner').fadeIn('fast');
+      //     }
+      //   }
+      // });
+
+      // Setup footer-img
+      Maleskine.changeimg();
+
+      // Setup footer-banner fontSize
+      // var number = $(".modal-footer-banner span").text().length,
+      // setFont = $(".modal-footer-banner span"),
+      // fontSize = ( (number >= 11) ? " 14px" : " 15px");
+      // setFont.css({ "fontSize": fontSize });
+
+      $(".modal-footer-banner .close").on("tap", function(){
+        Maleskine.removeFooterBanner();
+      });
+
+      // Setup modals
+      $('.qq-browser-help .btn-mainRed').on('tap', function(){
+        Maleskine.hideQQHelp();
+      });
+
+      $('.share-button').on('tap', function(){
+        Maleskine.showShareHelp();
+      });
+
+      $('.download-modal .close').on('tap', function(){
+        Maleskine.hideDownloadHelp();
+      });
+
+      // Setup buttons
+      $('.goto-app-button').on('tap', Maleskine.gotoApp);
+      $('.goto-download').on('tap', function() {
+        Maleskine.gotoDownload();
+      });
+
+      // For Video-Package
+      var MAX_VIDEO_COUNT = 10;
+      var video_maker = function (url, width, height, provider, flash) {
+        if (provider === 'bilibili') {
+          player = '<div class="video-player player">';
+          player += '<video width="' + width + '" height="' + height + '" preload="meta" controls="true">';
+          player += '<source src="' + url + '" type="video/mp4">';
+          player += '<object type="application/x-shockwave-flash" data="http://static.hdslb.com/play.swf" class="flash" style="width:' + width + 'px; height:' + height + 'px;">';
+          player += '<param name="bgcolor" value="#ffffff">';
+          player += '<param name="allowfullscreeninteractive" value="true">';
+          player += '<param name="allowfullscreen" value="true">';
+          player += '<param name="quality" value="high">';
+          player += '<param name="allowscriptaccess" value="always">';
+          player += '<param name="wmode" value="direct">';
+          player += '<param name="flashvars" value="' + flash + '">';
+          player += '</object>';
+          player += '</video>';
+          player += '</div>';
+        }
+        else {
+          player = '<iframe class="player" src="' + url + '" height="' + height + '" width="' + width + '" frameborder=0 allowfullscreen style="width:' + width + 'px; height:' + height + 'px;"></iframe>';
+        }
+        return player;
+      };
+      var doesVideoURLAvailable = function (url) {
+        // if (url.indexOf('../../') === 0) return true;
+        check = /^https?:\/\/(?:[\w\.]*?\.(?:youku|tudou|qq|bilibili)\.com|[\w\.\-]*?\.acgvideo\.com)\//i;
+        return !!(url.match(check));
+      };
+      var getVideoCoverImage = function (uuid, dimension) {
+        var result = '';
+        if (dimension) {
+          result = "http://upload.jianshu.io/videos/cover_imgs/" + uuid + "?imageView2/1/w/" + dimension + "/h/" + dimension;
+        }
+        else {
+          result = "http://upload.jianshu.io/videos/cover_imgs/" + uuid;
+        }
+        return result;
+      };
+      var width = $('div.content').width();
+      width = Math.round(width);
+      var height = Math.round(width / 6 * 5); // 5/6 is the ratio
+      $('div.video-package').each(function (index, pkg) {
+        pkg = $(pkg);
+        if (index >= MAX_VIDEO_COUNT) {
+          pkg.remove();
+          return;
+        }
+        var url = pkg.attr('data-video-url'), img = pkg.attr('data-preview-url');
+        if (!(url && doesVideoURLAvailable(url))) {
+          pkg.remove();
+          return;
+        }
+        var provider = pkg.attr('data-provider');
+        var flash = pkg.attr('data-flash-url');
+        var player = $(video_maker(url, width, height, provider, flash));
+        var cover = pkg.attr('data-cover-uuid');
+        var caption = pkg.find('.video-description');
+        var captionContent = caption.html();
+        var placeholder = $('<div class="video-placeholder-area">' + captionContent + '</div>');
+        placeholder.css({'width': width + 'px'});
+        var videoCover = $('<img class="video-cover">');
+        videoCover.attr('src', getVideoCoverImage(cover, 90));
+        placeholder.append(videoCover);
+        caption.html('');
+        pkg.find('br').before(placeholder);
+        var closeBtn = $('<div class="video-close-button"><i class="fa fa-eject"></i> 收起视频</div>');
+        closeBtn.css({display: 'none'});
+        var providerBtn = $('<div class="video-provider-button"><i class="fa fa-external-link"></i> 转到视频页</div>');
+        providerBtn.css({display: 'none'});
+        if (provider === 'bilibili') {
+          closeBtn.css({'margin-top': '-10px'});
+          providerBtn.css({'margin-top': '-10px'});
+          origin = flash.split('&').filter(function (info) {
+            return info.indexOf('aid') >= 0;
+          });
+          if (origin.length > 0) {
+            origin = origin[0];
+            origin = origin.split('=');
+            origin = origin[1] || '';
+          }
+          else {
+            origin = '';
+          }
+          if (origin === '') {
+            origin = 'http://www.bilibili.com/';
+          }
+          else {
+            origin = 'http://www.bilibili.com/video/av' + origin + '/';
+          }
+          providerBtn.on('click', function () {
+            window.open(origin);
+          });
+        }
+        pkg.append(closeBtn);
+        pkg.append(providerBtn);
+        var show = false;
+        placeholder.on('click', function () {
+          if (show) return
+          show = true;
+          placeholder.after(player);
+          first = false;
+          placeholder.hide();
+          // caption.html(captionContent);
+          pkg.css({'margin-bottom': '50px'});
+          closeBtn.css({display: 'block'});
+          if (provider === 'bilibili') {
+            providerBtn.css({display: 'block'});
+          }
+        });
+        closeBtn.on('click', function () {
+          if (!show) return;
+          show = false;
+          player.remove();
+          placeholder.show();
+          // caption.html('');
+          pkg.css({'margin-bottom': ''});
+          closeBtn.css({display: 'none'});
+          providerBtn.css({display: 'none'});
+        });
+      });
+
+      Maleskine.markView();
+    });
+  </script>
+
+  <script type="text/javascript">
+    Maleskine.markView = function(){
+      Maleskine.visitData = {};
+      Maleskine.visitData['uuid'] = '6f5acfa0-96e4-0133-9cfa-525400918cd7';
+
+      if (document.referrer != null && document.referrer.length > 0) {
+        Maleskine.visitData["referrer"] = document.referrer;
+      }
+
+      while (match = Maleskine.parametersReg.exec(window.location.search.slice(1, window.location.search.length + 1 || 9e9))) {
+        if ((_ref = match[1]) === "utm_source" || _ref === "utm_medium" || _ref === "utm_term" || _ref === "utm_content" || _ref === "utm_campaign") {
+          Maleskine.visitData[match[1]] = match[2];
+        }
+      }
+
+      $.post("/notes/" + Maleskine.note.slug + "/mark_viewed", Maleskine.visitData);
+
+      if (window.innerHeight + window.scrollY >= Maleskine.readScrollLimit) {
+        window.setTimeout((function() {
+          return Maleskine.markRead();
+        }), 1500);
+      } else {
+        $(window).on('scroll.markread', function() {
+          if (window.innerHeight + window.scrollY >= Maleskine.readScrollLimit) {
+            $(window).off('scroll.markread');
+            return Maleskine.markRead();
+          }
+        });
+      }
+    }
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.reward-button').on('tap', function(e) {
+        var $rewardButton = $(e.currentTarget);
+        if (!$rewardButton.hasClass('disabled')) {
+          $rewardButton.addClass('disabled');
+          $(e.currentTarget).html('正在跳转...');
+          var authorizeUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa14e829b85190768&redirect_uri=http%3A%2F%2Fwww.jianshu.com%2Fcallback%2Fwechat%2Freward%2Fnote%2F2569395&response_type=code&scope=snsapi_base&state=reward#wechat_redirect';
+          window.location.href = authorizeUrl;
+        }
+      });
+    });
+  </script>
+
+  <!--- Weixin part -->
+</body>
+</html>
